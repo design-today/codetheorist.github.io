@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+        {% include header.html %}
+
+        {% include off-canvas.html %}
+
+        <!-- original content goes in this container -->
+        <div class="off-canvas-content" data-off-canvas-content>
+          <main class="page-content" aria-label="Content">
+            <div class="wrapper">
+              {{ content }}
+            </div>
+          </main>
+          {% include footer.html %}
+        </div>
+      </div>
+    </div>
+    <script src="/assets/javascripts/vendor/jquery.js"></script>
+    <script src="/assets/javascripts/vendor/what-input.js"></script>
+    <script src="/assets/javascripts/vendor/foundation.min.js"></script>
+    <script src="/assets/javascripts/app.js"></script>
+
+  </body>
+</html>

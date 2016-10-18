@@ -1,0 +1,45 @@
+    <!-- off-canvas left menu -->
+    <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+      <ul class="vertical menu" data-accordion-menu>
+          {% for dale in site.data.nav-left %}
+
+            <!-- check to see if the data file has a submenu, and if so display it -->
+            {% if dale.subcategories != null %}
+              <li>
+                <a href="{{ dale.url }}">{{ dale.title }}</a>
+                <ul class="menu vertical nested">
+                {% for subcategory in dale.subcategories %}
+                  <li><a href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+                {% endfor %}
+                </ul>
+            {% else %}
+              <li>
+                <a href="{{ dale.href }}">{{ dale.title }}</a>
+            {% endif %}
+            </li>
+          {% endfor %}
+      </ul>
+    </div>
+
+    <!-- off-canvas right menu -->
+    <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
+      <ul class="vertical menu" data-accordion-menu>
+          {% for dale in site.data.nav-right %}
+
+            <!-- check to see if the data file has a submenu, and if so display it -->
+            {% if dale.subcategories != null %}
+              <li>
+                <a href="{{ dale.url }}">{{ dale.title }}</a>
+                <ul class="menu vertical nested">
+                {% for subcategory in dale.subcategories %}
+                  <li><a href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+                {% endfor %}
+                </ul>
+            {% else %}
+              <li>
+                <a href="{{ dale.href }}">{{ dale.title }}</a>
+            {% endif %}
+            </li>
+          {% endfor %}
+      </ul>
+    </div>

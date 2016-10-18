@@ -1,0 +1,26 @@
+- title: "Home"
+  href: "/"
+
+- title: "Learn"
+  href: "/"
+  subcategories:
+    - subtitle: "Learning topic 1"
+      subhref: "/"
+    - subtitle: "Learning topic 2"
+      subhref: "/"
+    - subtitle: "Learning topic 3"
+      subhref: "/"
+
+- title: "Tools"
+  subcategories:
+    - subtitle: "Tools1"
+      subhref: "/"
+    - subtitle: "Tools2"
+      subhref: ""
+
+- title: "Support"
+  href: "/"
+
+
+- title: "About Us"
+  href: "/"

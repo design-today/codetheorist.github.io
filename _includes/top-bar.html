@@ -1,0 +1,43 @@
+    <!-- "wider" top-bar menu for 'medium' and up -->
+    <div id="" class="top-bar show-for-medium">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text">{{ site.title | escape }}</li>
+          {% for dale in site.data.nav-left %}
+            <!-- check to see if the data file has a submenu, and if so display it -->
+            {% if dale.subcategories != null %}
+              <li class="has-submenu">
+                <a href="{{ dale.url }}">{{ dale.title }}</a>
+                <ul class="menu submenu vertical" data-submenu>
+                {% for subcategory in dale.subcategories %}
+                  <li><a href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+                {% endfor %}
+                </ul>
+            {% else %}
+              <li>
+                <a href="{{ dale.href }}">{{ dale.title }}</a>
+            {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="dropdown menu" data-dropdown-menu>
+          {% for dale in site.data.nav-right %}
+            {% if dale.subcategories != null %}
+              <li class="has-submenu">
+                <a href="{{ dale.url }}">{{ dale.title }}</a>
+                <ul class="menu submenu vertical" data-submenu>
+                {% for subcategory in dale.subcategories %}
+                  <li><a href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+                {% endfor %}
+                </ul>
+            {% else %}
+              <li>
+                <a href="{{ dale.href }}">{{ dale.title }}</a>
+            {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
