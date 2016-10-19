@@ -42,3 +42,9 @@ exclude:            [
 sass:
   sass_dir:          ./assets/stylesheets
   style:            :compact
+
+collections:
+  posts:
+    output: true
+  pages:
+    output: true
