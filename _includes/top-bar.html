@@ -1,8 +1,9 @@
     <!-- "wider" top-bar menu for 'medium' and up -->
     <div id="" class="top-bar show-for-medium">
+      <a class="top-bar-large-logo hide-for-large" href="{{site.url}}"><img src="/assets/images/logo.png" /></a>
       <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
-          <li class="menu-text">{{ site.title | escape }}</li>
+        <li class="menu-text"><a class="top-bar-normal-logo show-for-large" href="{{site.url}}"><img src="/assets/images/logo.png" /></a></li>
           {% for dale in site.data.nav-left %}
             <!-- check to see if the data file has a submenu, and if so display it -->
             {% if dale.subcategories != null %}
@@ -19,9 +20,24 @@
             {% endif %}
             </li>
           {% endfor %}
+          {% for dale in site.data.nav-right %}
+            {% if dale.subcategories != null %}
+              <li class="has-submenu hide-for-large">
+                <a href="{{ dale.url }}">{{ dale.title }}</a>
+                <ul class="menu submenu vertical" data-submenu>
+                {% for subcategory in dale.subcategories %}
+                  <li><a href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+                {% endfor %}
+                </ul>
+            {% else %}
+              <li class="hide-for-large">
+                <a href="{{ dale.href }}">{{ dale.title }}</a>
+            {% endif %}
+            </li>
+          {% endfor %}
         </ul>
       </div>
-      <div class="top-bar-right">
+      <div class="top-bar-right show-for-large">
         <ul class="dropdown menu" data-dropdown-menu>
           {% for dale in site.data.nav-right %}
             {% if dale.subcategories != null %}
@@ -33,7 +49,7 @@
                 {% endfor %}
                 </ul>
             {% else %}
-              <li>
+              <li class="">
                 <a href="{{ dale.href }}">{{ dale.title }}</a>
             {% endif %}
             </li>
