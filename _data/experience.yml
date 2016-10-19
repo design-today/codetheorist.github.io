@@ -1,0 +1,18 @@
+- title: "Gitlab"
+  description: "<p>I have extensive experience setting up and managing Gitlab, an
+   open source, self-hosted alternative to Github.</p>"
+  href: "/"
+  image: '/assets/images/gitlab-wm.png'
+
+- title: "Mattermost"
+  description: "<p>To co-incide with my experience with Gitlab, I also have experience using & setting up Mattermost,
+   as this comes bundled with Gitlab when using the Omnibus package.</p>"
+  href: "/"
+  image: '/assets/images/mattermost-logo.png'
+
+- title: "CMS"
+  description: "Having built many websites using the three major CMS frameworks,
+   I have extensive knowledge of developing sites, themes & extensions for them."
+  href: "/"
+  image: '/assets/images/cms.png'
+

@@ -29,7 +29,7 @@ markdown: kramdown
 # theme: minima
 gems:
   - jekyll-feed
-
+excerpt_separator: ""
 exclude:            [
                       '.gitignore',
                       'README.md',
@@ -49,4 +49,6 @@ collections:
   docs:
     output: true
   support:
+    output: true
+  pages:
     output: true
