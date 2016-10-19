@@ -6,7 +6,9 @@ redirect_from: /support/site-specs.html
 ---
 
 <pre>
-{{site.github.url}}
+{% for meta in site.github%}
+  {{meta}}
+{% endfor% }
 </pre>
 <ul>
   {% for repository in site.github.public_repositories %}
