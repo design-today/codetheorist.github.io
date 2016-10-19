@@ -46,5 +46,5 @@ sass:
 collections:
   posts:
     output: true
-  pages:
+  docs:
     output: true
