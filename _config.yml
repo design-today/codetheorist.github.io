@@ -48,3 +48,5 @@ collections:
     output: true
   docs:
     output: true
+  support:
+    output: true
