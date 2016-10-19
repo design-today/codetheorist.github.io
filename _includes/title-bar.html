@@ -1,12 +1,22 @@
   <!-- off-canvas title bar for 'small' screen -->
   <div class="title-bar hide-for-medium" data-responsive-toggle="widemenu">
     <div class="title-bar-left">
-      <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
-      <span class="title-bar-title">Foundation</span>
+      {% if site.navigation.leftmenu == true %}
+        <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
+      {% endif %}
+      {% if site.navigation.titletext == true %}
+        <span class="title-bar-title">{{site.title}}</span>
+      {% endif %}
     </div>
+    {% if site.navigation.titletext == false %}
+      <div id="title-bar-middle" style="float: left;">
+        <img class="title-bar-logo-img" src="/assets/images/logo.png" />
+      </div>
+    {% endif %}
     <div class="title-bar-right">
-      <span class="title-bar-title">Login</span>
-      <button class="menu-icon" type="button" data-open="offCanvasRight"></button>
+      {% if site.navigation.rightmenu == true %}
+        <button class="menu-icon" type="button" data-open="offCanvasRight"></button>
+      {% endif %}
     </div>
   </div>
 

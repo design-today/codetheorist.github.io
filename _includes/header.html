@@ -1,4 +1,6 @@
 <header class="site-header" role="banner">
-  {% include title-bar.html %}
-  {% include top-bar.html %}
+  {% if site.navigation.leftmenu == true or site.navigation.leftmenu == true %}
+    {% include title-bar.html %}
+    {% include top-bar.html %}
+  {% endif %}
 </header>
