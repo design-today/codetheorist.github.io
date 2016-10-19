@@ -28,6 +28,8 @@ redirect_from: /docs/index.html
 <pre>
 {{site.github | jsonify}}
 </pre>
-{% for repository in site.github.public_repositories %}
-  * [{{ repository.name }}]({{ repository.html_url }})
-{% endfor %}
+<ul>
+  {% for repository in site.github.public_repositories %}
+    <li><a href="{{ repository.html_url }}">{{ repository.name }}</a></li>
+  {% endfor %}
+</ul>
