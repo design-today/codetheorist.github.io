@@ -4,15 +4,12 @@
 - title: "Experience"
   href: "/experience/"
   subcategories:
-    - subtitle: "Full Overview"
-      subhref: "/experience/overview"
-      subsubcategories:
-        - subtitle: "Languages"
-          subhref: "/experience/languages"
-        - subtitle: "Software"
-          subhref: "/experience/software"
-        - subtitle: "Web Frameworks"
-          subhref: "/experience/frameworks"
+    - subtitle: "Languages"
+      subhref: "/experience/languages"
+    - subtitle: "Software"
+      subhref: "/experience/software"
+    - subtitle: "Web Frameworks"
+      subhref: "/experience/frameworks"
 
 # - title: "Tools"
 #   subcategories:
