@@ -3,6 +3,7 @@
       $("#typed-inner").typed({
         strings: ["<h1>CodeTheorist</h1>"],
         typeSpeed: 50,
+        startDelay: 300,
         showCursor: false,
         callback: function() {
           $("#typed-inner-sub").typed({
