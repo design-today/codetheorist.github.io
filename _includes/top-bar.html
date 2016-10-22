@@ -1,5 +1,5 @@
     <!-- "wider" top-bar menu for 'medium' and up -->
-    <div id="" class="top-bar show-for-medium">
+    <div id="top-bar" class="top-bar show-for-medium">
       <a class="top-bar-large-logo hide-for-large" href="{{site.url}}"><img src="/assets/images/logo.png" /></a>
       <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
@@ -9,10 +9,21 @@
               <!-- check to see if the data file has a submenu, and if so display it -->
               {% if dale.subcategories != null %}
                 <li class="has-submenu">
-                  <a href="{{ dale.url }}">{{ dale.title }}</a>
+                  <a href="{{ dale.href }}">{{ dale.title }}</a>
                   <ul class="menu submenu vertical" data-submenu>
-                  {% for subcategory in dale.subcategories %}
-                    <li><a href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+                  {% for sub in dale.subcategories %}
+                    {% if sub.subsubcategories != null %}
+                      <li class="has-submenu">
+                        <a href="{{ sub.subhref }}">{{ sub.subtitle }}</a>
+                        <ul class="menu submenu vertical" data-submenu>
+                          {% for subsub in sub.subsubcategories %}
+                            <li><a href="{{ subsub.subhref }}">{{ subsub.subtitle }}</a></li>
+                          {% endfor %}
+                          </ul>
+                        </li>
+                    {% else %}
+                      <li><a href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+                    {% endif %}
                   {% endfor %}
                   </ul>
               {% else %}

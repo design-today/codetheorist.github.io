@@ -1,25 +1,63 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-<div class="home">
+  {% include head.html %}
 
-  <h1 class="page-heading">Posts</h1>
-  
-  {{ content }}
+  <body>
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+        {% include header.html %}
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        {% include off-canvas.html %}
 
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+        <!-- original content goes in this container -->
+        <div class="off-canvas-content" data-off-canvas-content>
+          <main class="page-content" aria-label="Content">
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+            <div id="home-banner">
+            <div id="typed">
+            <div id="typed-inner">
+            </div><br />
+            <div id="typed-inner-sub">
+            </div>
+            </div>
+            </div>
 
-</div>
+            <div class="wrapper">
+              <div class="home">
+                <h1 class="page-heading">Posts</h1>
+
+                {{ content }}
+
+                <ul class="post-list">
+
+                  {% for post in site.posts %}
+
+                    <li>
+                      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                      <h2><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+                    </li>
+
+                  {% endfor %}
+
+                </ul>
+                <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+              </div>
+            </div>
+          </main>
+
+          {% include footer.html %}
+
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/javascripts/vendor/jquery.js"></script>
+    <script src="/assets/javascripts/vendor/what-input.js"></script>
+    <script src="/assets/javascripts/vendor/foundation.min.js"></script>
+    <script src="/assets/javascripts/app.js"></script>
+    <script src="/assets/javascripts/typed.js"></script>
+    <script src="/assets/javascripts/app-home.js"></script>
+
+  </body>
+</html>

@@ -1,6 +1,8 @@
 ---
 # front matter
 ---
+// Font-Awesome
+@import 'font-awesome/font-awesome';
 
 // Custom Variables
 @import 'variables';
@@ -50,11 +52,9 @@
 // @include foundation-top-bar;
 
 
-// Font-Awesome
-@import 'font-awesome/font-awesome';
 
 // Google fonts
-//@import url(https://fonts.googleapis.com/css?family=Muli:400,300,300italic);
+@import url(https://fonts.googleapis.com/css?family=Muli:400,300,300italic);
 
 // Custom theme files
 @import 'theme';
@@ -129,9 +129,6 @@ a.top-bar-normal-logo {
 }
 .experience-image {
   text-align: center;
-}
-.off-canvas-content {
-  padding: 1rem;
 }
 .experience-block {
   text-align: center;
@@ -224,4 +221,138 @@ h1 {
     text-align: center;
     padding: 0 5%;
   }
+}
+.wrapper {
+  max-width: 64em;
+  margin-right: auto;
+  margin-left: auto;
+}
+.site-footer {
+  // border-top: 1px solid #e8e8e8;
+  padding: 30px 0;
+  .footer-heading {
+      font-size: 18px;
+      margin-bottom: 15px;
+  }
+}
+.site-footer::after {
+  content: ' ';
+  clear: both;
+  display: block;
+}
+.contact-list {
+  list-style: none;
+  margin-left: 0;
+}
+.social-media-list {
+  list-style: none;
+  span.icon {
+    vertical-align: sub;
+  }
+  span:not(.icon) {
+    vertical-align: middle;
+  }
+  svg {
+    margin-left: 0.25rem;
+  }
+}
+.page-content::after {
+  display: block;
+  content: ' ';
+  clear: both;
+}
+#home-banner {
+  display: table;
+  // background-image: url('/assets/images/code.png');
+  // background-size: cover;
+  background-color: transparent;
+  // background-position: center;
+  max-width: 100%;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  #typed {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    background-color: rgba(255,255,255,0.5);
+    z-index: 1;
+    #typed-inner {
+      display: inline-block;
+      // min-height: 150px;
+      // padding: 10px 0 10px 10px;
+      color: #000;
+      text-shadow: #f0f0f0 0px 1px 0px;
+      font-family: "Consolas", "Courier New", "Courier";
+      text-align: left;
+      margin-bottom: 0;
+      text-align: center;
+      height: 2rem;
+      // overflow: hidden;
+      h1 {
+      }
+    }
+    #typed-inner-sub {
+      display: inline-block;
+      // min-height: 70px;
+      padding: 10px 0 10px 10px;
+      color: #000;
+      text-shadow: #f0f0f0 0px 1px 0px;
+      font-family: "Consolas", "Courier New", "Courier";
+      text-align: left;
+      // overflow: hidden;
+        margin-bottom: 0;
+        text-align: center;
+      h3 {
+      }
+    }
+  }
+}
+#home-banner:before {
+  content: "";
+  position: absolute;
+  // width: 190%;
+  // height: 190%;
+  top: 0%;
+  left: 0%;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  background: url('/assets/images/code.png');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  // -webkit-transform: rotate(-25deg);
+  // -moz-transform: rotate(-25deg);
+  // -ms-transform: rotate(-25deg);
+  // -o-transform: rotate(-25deg);
+  // transform: rotate(-25deg);
+  opacity: 0.2;
+}
+.typed-cursor{
+    opacity: 0;
+    -webkit-animation: blink 0.9s infinite;
+    -moz-animation: blink 0.9s infinite;
+    animation: blink 0.9s infinite;
+    text-shadow: #f0f0f0 0px 1px 0px;
+    font-family: "Consolas", "Courier New", "Courier";
+    font-size: 1.75em;
+    color: #000;
+    margin-left: 0.1rem;
+}
+@keyframes blink{
+    0% { opacity:0; }
+    50% { opacity:1; }
+    100% { opacity:0; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:0; }
+    50% { opacity:1; }
+    100% { opacity:0; }
+}
+@-moz-keyframes blink{
+    0% { opacity:0; }
+    50% { opacity:1; }
+    100% { opacity:0; }
 }
