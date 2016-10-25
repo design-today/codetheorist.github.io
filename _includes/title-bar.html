@@ -1,5 +1,5 @@
   <!-- off-canvas title bar for 'small' screen -->
-  <div class="title-bar hide-for-medium" data-responsive-toggle="widemenu">
+  <div id="title-bar" class="title-bar hide-for-medium" data-responsive-toggle="widemenu">
     <div class="title-bar-left">
       {% if site.navigation.leftmenu == true %}
         <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
@@ -9,7 +9,7 @@
       {% endif %}
     </div>
     {% if site.navigation.titletext == false %}
-      <div id="title-bar-middle" style="float: left;">
+      <div id="title-bar-middle">
         <img class="title-bar-logo-img" src="/assets/images/logo.png" />
       </div>
     {% endif %}
