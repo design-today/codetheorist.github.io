@@ -1,76 +1,22 @@
-    <!-- "wider" top-bar menu for 'medium' and up -->
-    <div id="top-bar" class="top-bar show-for-medium">
-      <a class="top-bar-large-logo hide-for-large" href="{{site.url}}"><img src="/assets/images/logo.png" /></a>
-      <div class="top-bar-left">
-        <ul class="dropdown menu" data-dropdown-menu>
-        <li class="menu-text"><a class="top-bar-normal-logo show-for-large" href="{{site.url}}"><img src="/assets/images/logo.png" /></a></li>
-          {% if site.navigation.leftmenu == true %}
-            {% for dale in site.data.nav-left %}
-              <!-- check to see if the data file has a submenu, and if so display it -->
-              {% if dale.subcategories != null %}
-                <li class="has-submenu">
-                  <a href="{{ dale.href }}">{{ dale.title }}</a>
-                  <ul class="menu submenu vertical" data-submenu>
-                  {% for sub in dale.subcategories %}
-                    {% if sub.subsubcategories != null %}
-                      <li class="has-submenu">
-                        <a href="{{ sub.subhref }}">{{ sub.subtitle }}</a>
-                        <ul class="menu submenu vertical" data-submenu>
-                          {% for subsub in sub.subsubcategories %}
-                            <li><a href="{{ subsub.subhref }}">{{ subsub.subtitle }}</a></li>
-                          {% endfor %}
-                          </ul>
-                        </li>
-                    {% else %}
-                      <li><a href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
-                    {% endif %}
-                  {% endfor %}
-                  </ul>
-              {% else %}
-                <li>
-                  <a href="{{ dale.href }}">{{ dale.title }}</a>
-              {% endif %}
-              </li>
-            {% endfor %}
-          {% endif %}
-          {% if site.navigation.rightmenu == true %}
-            {% for dale in site.data.nav-right %}
-              {% if dale.subcategories != null %}
-                <li class="has-submenu hide-for-large">
-                  <a href="{{ dale.url }}">{{ dale.title }}</a>
-                  <ul class="menu submenu vertical" data-submenu>
-                  {% for subcategory in dale.subcategories %}
-                    <li><a href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
-                  {% endfor %}
-                  </ul>
-              {% else %}
-                <li class="hide-for-large">
-                  <a href="{{ dale.href }}">{{ dale.title }}</a>
-              {% endif %}
-              </li>
-            {% endfor %}
-          {% endif %}
-        </ul>
-      </div>
-      {% if site.navigation.rightmenu == true %}
-      <div class="top-bar-right show-for-large">
-        <ul class="dropdown menu" data-dropdown-menu>
-          {% for dale in site.data.nav-right %}
-            {% if dale.subcategories != null %}
-              <li class="has-submenu">
-                <a href="{{ dale.url }}">{{ dale.title }}</a>
-                <ul class="menu submenu vertical" data-submenu>
-                {% for subcategory in dale.subcategories %}
-                  <li><a href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
-                {% endfor %}
-                </ul>
-            {% else %}
-              <li class="">
-                <a href="{{ dale.href }}">{{ dale.title }}</a>
-            {% endif %}
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
+<!-- "wider" top-bar menu for 'medium' and up -->
+<div id="top-bar" class="top-bar show-for-medium">
+  <a class="top-bar-large-logo hide-for-large" href="{{site.url}}"><img src="{{ site.logo_location }}" /></a>
+  <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li class="menu-text"><a class="top-bar-normal-logo show-for-large" href="{{site.url}}"><img src="{{ site.logo_location }}" /></a></li>
+        {% if site.navigation.left.enabled == true %}
+          {% include desktop-menu.html nav=site.data.navigation.left %}
+        {% endif %}
+        {% if site.navigation.right.enabled == true %}
+          {% include desktop-menu.html nav=site.data.navigation.right link_class="hide-for-large" %}
+        {% endif %}
+      </ul>
+  </div>
+  {% if site.navigation.right.enabled == true %}
+    <div class="top-bar-right show-for-large">
+      <ul class="dropdown menu" data-dropdown-menu>
+        {% include desktop-menu.html nav=site.data.navigation.right %}
+      </ul>
     </div>
+  {% endif %}
+</div>

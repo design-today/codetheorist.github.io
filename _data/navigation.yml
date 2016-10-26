@@ -1,0 +1,28 @@
+left:
+  - title: "Home"
+    url: "/"
+
+  - title: "Experience"
+    url: "/experience/"
+    submenu:
+      - title: "Overview"
+        url: "/experience/"
+
+      - title: "Full Overview"
+        url: "/experience/"
+        submenu:
+          - title: "Languages"
+            url: "/experience/languages"
+
+          - title: "Software"
+            url: "/experience/software"
+
+          - title: "Web Frameworks"
+            url: "/experience/frameworks"
+
+right:
+  - title: "Login"
+    url: "/login/"
+
+  - title: "Register"
+    url: "/"

@@ -36,9 +36,16 @@ exclude:            [
                       'Gemfile.lock',
                     ]
 navigation:
-  leftmenu: true
-  rightmenu: false
   titletext: false
+  left:
+    enabled: true
+    responsive: 'drilldown' # Can be 'drilldown' or 'accordion'
+    sidebar: 'left'
+  right:
+    enabled: true
+    responsive: 'drilldown' # Can be 'drilldown' or 'accordion'
+    sidebar: 'right'
+logo_location: '/assets/images/logo.png'
 # Assets
 # We specify the directory for Jekyll so we can use @imports.
 sass:

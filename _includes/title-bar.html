@@ -1,7 +1,7 @@
   <!-- off-canvas title bar for 'small' screen -->
   <div id="title-bar" class="title-bar hide-for-medium" data-responsive-toggle="widemenu">
     <div class="title-bar-left">
-      {% if site.navigation.leftmenu == true %}
+      {% if site.navigation.left.enabled == true %}
         <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
       {% endif %}
       {% if site.navigation.titletext == true %}
@@ -14,7 +14,7 @@
       </div>
     {% endif %}
     <div class="title-bar-right">
-      {% if site.navigation.rightmenu == true %}
+      {% if site.navigation.right.enabled == true %}
         <button class="menu-icon" type="button" data-open="offCanvasRight"></button>
       {% endif %}
     </div>

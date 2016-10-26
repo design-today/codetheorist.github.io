@@ -1,0 +1,10 @@
+{% for item in include.nav %}
+  <li class="{% if item.submenu != null %}has-submenu {% endif %}{{ include.link_class }}">
+    <a href="{{ item.url }}">{{ item.title }}</a>
+    {% if item.submenu != null %}
+      <ul class="menu submenu vertical" data-submenu>
+        {% include desktop-menu.html nav=item.submenu %}
+      </ul>
+    {% endif %}
+  </li>
+{% endfor %}

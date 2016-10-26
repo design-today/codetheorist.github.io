@@ -1,57 +1,9 @@
-    <!-- off-canvas left menu -->
-    <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
-      <ul class="vertical menu" data-accordion-menu>
-          {% if site.navigation.leftmenu == true %}
-            {% for dale in site.data.nav-left %}
-              <!-- check to see if the data file has a submenu, and if so display it -->
-              {% if dale.subcategories != null %}
-                <li class="has-submenu">
-                  <a href="{{ dale.url }}">{{ dale.title }}</a>
-                  <ul class="menu submenu vertical" data-submenu>
-                  {% for sub in dale.subcategories %}
-                    {% if sub.subsubcategories != null %}
-                      <li class="has-submenu">
-                        <a href="{{ sub.subhref }}">{{ sub.subtitle }}</a>
-                        <ul class="menu submenu vertical" data-submenu>
-                          {% for subsub in sub.subsubcategories %}
-                            <li><a href="{{ subsub.subhref }}">{{ subsub.subtitle }}</a></li>
-                          {% endfor %}
-                          </ul>
-                        </li>
-                    {% else %}
-                      <li><a href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
-                    {% endif %}
-                  {% endfor %}
-                  </ul>
-              {% else %}
-                <li>
-                  <a href="{{ dale.href }}">{{ dale.title }}</a>
-              {% endif %}
-              </li>
-            {% endfor %}
-          {% endif %}
-      </ul>
-    </div>
+<!-- off-canvas left menu -->
+<div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+  {% include mobile-menu.html nav=site.data.navigation.left type=site.navigation.left.responsive %}
+</div>
 
-    <!-- off-canvas right menu -->
-    <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
-      <ul class="vertical menu" data-accordion-menu>
-          {% for dale in site.data.nav-right %}
-
-            <!-- check to see if the data file has a submenu, and if so display it -->
-            {% if dale.subcategories != null %}
-              <li>
-                <a href="{{ dale.url }}">{{ dale.title }}</a>
-                <ul class="menu vertical nested">
-                {% for subcategory in dale.subcategories %}
-                  <li><a href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
-                {% endfor %}
-                </ul>
-            {% else %}
-              <li>
-                <a href="{{ dale.href }}">{{ dale.title }}</a>
-            {% endif %}
-            </li>
-          {% endfor %}
-      </ul>
-    </div>
+<!-- off-canvas right menu -->
+<div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
+  {% include mobile-menu.html nav=site.data.navigation.right type=site.navigation.right.responsive %}
+</div>
