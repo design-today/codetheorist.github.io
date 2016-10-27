@@ -2,6 +2,8 @@
   <ul class="vertical menu" data-drilldown>
 {% else if include.type == 'accordion' %}
   <ul class="vertical menu" data-accordion-menu>
+{% else %}
+  <ul class="vertical menu">
 {% endif %}
 
 {% for item in include.nav %}
@@ -9,12 +11,13 @@
     <a href="{{ item.url }}">{{ item.title }}</a>
     {% if item.submenu != null %}
       <ul class="vertical menu">
-        {% include mobile-menu.html nav=item.submenu %}
+        {% assign submenu=item.submenu %}
+
+        {% include mobile-menu.html nav=submenu %}
+        
       </ul>
     {% endif %}
   </li>
 {% endfor %}
 
-{% if include.type == 'accordion' or include.type == 'drilldown' %}
   </ul>
-{% endif %}
