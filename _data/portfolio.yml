@@ -1,5 +1,51 @@
 - title: "Brooksons"
   description: "<p>I took part in this particular project during my time at <a href='http://ems-internet.co.uk' target='_blank'>EMS Internet</a>. The project involved building a master theme to customize for 4 individual smaller sites.</p>"
   href: "/"
-  image: '/portfolio/images/brookson.png'
+  images: [
+    '/portfolio/images/brookson-sme.jpg',
+    '/portfolio/images/brookson-healthcare.jpg',
+    '/portfolio/images/brookson-outsourcing.jpg',
+    '/portfolio/images/brookson-legal.jpg'
+  ]
+  links:
+    - title: 'Brookson SME'
+      url: 'https://brooksonsme.co.uk'
+
+- title: "Newton-le-Willows Blinds"
+  description: "<p>This was a fantastic custom build I completed at <a href='http://ems-internet.co.uk' target='_blank'>EMS Internet</a>. This particular site features some nice use of subtle animations & <a href='http://imakewebthings.com/waypoints/' target='_blank'>Waypoints</a>.</p>"
+  href: "/"
+  images: [
+    '/portfolio/images/newton-blinds.jpg',
+    '/portfolio/images/newton-products.jpg'
+  ]
+
+- title: "Csaba Winter"
+  description: "<p>This client was extremely satisfied with the finished product, even more so because we acheived this on a templated package due to effective communication between myself and the client.</p>"
+  href: "/"
+  images: [
+    '/portfolio/images/csaba-winter.jpg'
+  ]
+
+- title: "Newark Lodge"
+  description: "<p>This was a Wordpress build completed for the guys at Newark Lodge guesthouse. It features booking functionality, gallery, blog & more.</p>"
+  href: "/"
+  images: [
+    '/portfolio/images/newark-lodge.jpg',
+    '/portfolio/images/newark-gallery.jpg'
+  ]
+
+- title: "MJ Noble"
+  description: "<p>Another custom build I completed at <a href='http://ems-internet.co.uk' target='_blank'>EMS Internet</a>.</p>"
+  href: "/"
+  images: [
+    '/portfolio/images/mj-noble.jpg',
+    '/portfolio/images/mj-noble-contact.jpg'
+  ]
+
+- title: "SK Joinery"
+  description: "<p>Another templated site I completed at <a href='http://ems-internet.co.uk' target='_blank'>EMS Internet</a>.</p>"
+  href: "/"
+  images: [
+    '/portfolio/images/sk-joinery.jpg'
+  ]
 
