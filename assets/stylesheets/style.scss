@@ -313,6 +313,7 @@ h1 {
         margin-bottom: 0;
         text-align: center;
       h3 {
+        text-transform: none;
       }
     }
   }
@@ -372,4 +373,13 @@ h1 {
       height: 100%;
     }
   }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Consolas", "Courier New", "Courier";
+  text-transform: uppercase;
 }

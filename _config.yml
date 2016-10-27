@@ -18,16 +18,19 @@ email: codetheorist@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
 
 baseurl: "" # the subpath of your site, e.g. /blog
-# url: "http://localhost:4000" # the base hostname & protocol for your site, e.g. http://example.com
-url: "https://codetheorist.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://localhost:4000" # the base hostname & protocol for your site, e.g. http://example.com
+# url: "https://codetheorist.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: alxsdesign
 github_username:  codetheorist
-# host: 0.0.0.0
+enable_rss: true
+host: 0.0.0.0
 # Build settings
 markdown: kramdown
 # theme: minima
-gems:
-  - jekyll-feed
+gems: [
+    'jekyll-feed',
+    'jekyll-paginate'
+  ]
 excerpt_separator: ""
 exclude:            [
                       '.gitignore',
@@ -42,7 +45,7 @@ navigation:
     responsive: 'drilldown' # Can be 'drilldown' or 'accordion'
     sidebar: 'left'
   right:
-    enabled: true
+    enabled: false
     responsive: 'drilldown' # Can be 'drilldown' or 'accordion'
     sidebar: 'right'
 logo_location: '/assets/images/logo.png'
@@ -61,3 +64,8 @@ collections:
     output: true
   pages:
     output: true
+  blogs:
+    output: true
+
+paginate: 5
+paginate_path: "/blog/page:num/"

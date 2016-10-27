@@ -1,0 +1,42 @@
+---
+layout: default
+title: Portfolio
+permalink: /portfolio/
+redirect_from: /pages/portfolio/index.html
+---
+<h1>{{ page.title }}</h1>
+<div class="small-12 columns">
+  {% assign odd = true %}
+  {% assign expost = 1 %}
+  {% for exp in site.data.portfolio %}
+    {% if odd == true %}
+      {% assign rowclass = "odd " %}
+      {% assign imageclass = "" %}
+      {% assign contentclass = "" %}
+      {% assign odd = false %}
+    {% else %}
+      {% assign rowclass = "even " %}
+      {% assign imageclass = "medium-push-6 " %}
+      {% assign contentclass = "medium-pull-6 " %}
+      {% assign odd = true %}
+    {% endif %}
+    <div class="{{ rowclass }}experience-block row" data-equalizer="expost-{{ expost }}" data-equalize-on="medium">
+      <div class="{{ imageclass }}experience-image medium-6 small-12 columns" data-equalizer-watch="expost-{{ expost }}">
+        {% if exp.image %}
+          <img class="experience-logo" src="{{ exp.image }}" />
+        {% endif %}
+      </div>
+      <div class="{{ contentclass }}experience-content-wrapper small-12 medium-6 columns" data-equalizer-watch="expost-{{ expost }}">
+        <div class="experience-content">
+          <div class="experience-title">
+            <h3>{{ exp.title }}</h3>
+          </div>
+          <div class="experience-description">
+            {{ exp.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% assign expost = expost | plus: 1 %}
+  {% endfor %}
+</div>

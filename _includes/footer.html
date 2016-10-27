@@ -33,6 +33,13 @@
             {% include icon-twitter.html username=site.twitter_username %}
           </li>
           {% endif %}
+
+          {% if site.enable_rss == true %}
+          <li>
+            {% include icon-rss.html %}
+          </li>
+          {% endif %}
+
         </ul>
       </div>
 

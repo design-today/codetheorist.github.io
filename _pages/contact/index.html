@@ -1,0 +1,14 @@
+---
+layout: default
+title: Contact Me
+permalink: /contact/
+redirect_from: /pages/contact/index.html
+---
+<form action="https://getsimpleform.com/messages?form_api_token=121d96372b39f922660899c4d83c775d" method="post">
+  <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+  <input type='hidden' name='redirect_to' value='{{ site.url }}/contact/' />
+  <!-- all your input fields here.... -->
+  <input type='text' name='name' />
+  <input type='text' name='email' />
+  <input type='submit' value='Submit' />
+</form>
