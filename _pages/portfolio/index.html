@@ -34,23 +34,9 @@ jsarr:
         {% if exp.images %}
           {% assign image_count = exp.images | size %}
           {% if image_count != 1 %}
-            {% assign slide = 1 %}
             <div class="slicky" id="slicky-{{ expost }}">
             {% for image in exp.images %}
-              {% if slide == 1 %}
               <img class="{{exp.title | downcase | normalize_whitespace }}-image-{{slide}}" src="{{ image }}" />
-              {% assign slide = slide | plus: 1 %}
-              {% endif %}
-            {% endfor %}
-            {% assign slide = 1 %}
-            {% for image in exp.images %}
-              {% if slide == 1 %}
-              {% assign slide = slide | plus: 1 %}
-              {% else %}
-              {{ slide }}
-              <img class="{{exp.title | downcase | normalize_whitespace }}-image-{{slide}}" src="{{ image }}" />
-              {% assign slide = slide | plus: 1 %}
-              {% endif %}
             {% endfor %}
             </div>
           {% else %}
