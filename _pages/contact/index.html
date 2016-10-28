@@ -4,11 +4,38 @@ title: Contact Me
 permalink: /contact/
 redirect_from: /pages/contact/index.html
 ---
+<h1 id="page-title">{{ page.title }}</h1>
 <form action="https://getsimpleform.com/messages?form_api_token=121d96372b39f922660899c4d83c775d" method="post">
-  <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
   <input type='hidden' name='redirect_to' value='{{ site.url }}/contact/' />
-  <!-- all your input fields here.... -->
-  <input type='text' name='name' />
-  <input type='text' name='email' />
-  <input type='submit' value='Submit' />
+  <div class="row">
+    <div class="small-12 medium-8 medium-centered columns">
+      <div class="input-group">
+        <span class="input-group-label">Name</span>
+        <input class="input-group-field" type="text" name='name' placeholder="Joe Bloggs" />
+      </div>
+    </div>
+    <div class="small-12 medium-8 medium-centered columns">
+      <div class="input-group">
+        <span class="input-group-label">Email</span>
+        <input class="input-group-field" type='text' name='email' placeholder="joe.bloggs@helloworld.net" />
+      </div>
+    </div>
+    <div class="small-12 medium-8 medium-centered columns">
+      <div class="input-group">
+        <span class="input-group-label">Subject</span>
+        <input class="input-group-field" type='text' name='subject' placeholder="Job Offer" />
+      </div>
+    </div>
+    <div class="small-12 medium-8 medium-centered columns">
+      <div class="input-group">
+        <span class="input-group-label">Message</span>
+        <textarea wrap="soft" rows="4" cols="50" class="input-group-field" type='textarea' name='message' placeholder="Hello, I am from Hello World Inc..."></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 medium-8 medium-centered columns submit-button-wrapper">
+      <input type='submit' class="button submit-button" value='Submit'/>
+    </div>
+  </div>
 </form>

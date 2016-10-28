@@ -1,0 +1,9 @@
+    <script src="/assets/javascripts/vendor/jquery.js"></script>
+    <script src="/assets/javascripts/vendor/what-input.js"></script>
+    <script src="/assets/javascripts/vendor/foundation.min.js"></script>
+    {% if page.jsarr %}
+      {% for js in page.jsarr %}
+        <script src="{{ js }}"></script>
+      {% endfor %}
+    {% endif %}
+    <script src="/assets/javascripts/app.js"></script>

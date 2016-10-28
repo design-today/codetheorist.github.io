@@ -8,10 +8,14 @@
     '/portfolio/images/brookson-legal.jpg'
   ]
   links:
-    - title: 'Brookson SME'
-      url: 'https://brooksonsme.co.uk'
+    - title: 'Brookson Healthcare'
+      url: 'https://www.brooksonhealthcare.co.uk/'
+    - title: 'Brookson Legal'
+      url: 'https://www.brooksonlegalservices.co.uk/'
     - title: 'Brookson Outsourcing'
       url: 'https://brooksonoutsourcing.co.uk'
+    - title: 'Brookson SME'
+      url: 'https://brooksonsme.co.uk'
 
 - title: "Newton-le-Willows Blinds"
   description: "<p>This was a fantastic custom build I completed at <a href='http://ems-internet.co.uk' target='_blank'>EMS Internet</a>. This particular site features some nice use of subtle animations & <a href='http://imakewebthings.com/waypoints/' target='_blank'>Waypoints</a>.</p>"

@@ -1,10 +1,15 @@
 ---
 layout: home
+title: Latest Posts
+jsarr:
+  - '/assets/javascripts/slick.min.js'
+  - '/assets/javascripts/typed.js'
+  - '/assets/javascripts/app-home.js'
 ---
+<h1 id="page-title">{{ page.title }}</h1>
 
             <div class="wrapper">
               <div class="home">
-                <h3 class="page-heading text-center">Latest Posts</h3>
 
                 <div class="row">
                   {% for post in site.posts limit: 3 %}

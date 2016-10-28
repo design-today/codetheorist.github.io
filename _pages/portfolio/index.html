@@ -3,8 +3,11 @@ layout: default
 title: Recent Work
 permalink: /portfolio/
 redirect_from: /pages/portfolio/index.html
+jsarr:
+  - '/assets/javascripts/slick.min.js'
+  - '/assets/javascripts/slick-init.js'
 ---
-<h1>{{ page.title }}</h1>
+<h1 id="page-title">{{ page.title }}</h1>
 <div class="row">
     <div class="small-10 small-centered columns">
       <p class="text-center">Below is a small selection of sites I have recently completed. Please feel free to click through to the individual sites to check them out.</p><br />
@@ -32,10 +35,22 @@ redirect_from: /pages/portfolio/index.html
           {% assign image_count = exp.images | size %}
           {% if image_count != 1 %}
             {% assign slide = 1 %}
-            <div class="slicky">
+            <div class="slicky" id="slicky-{{ expost }}">
             {% for image in exp.images %}
+              {% if slide == 1 %}
               <img class="{{exp.title | downcase | normalize_whitespace }}-image-{{slide}}" src="{{ image }}" />
               {% assign slide = slide | plus: 1 %}
+              {% endif %}
+            {% endfor %}
+            {% assign slide = 1 %}
+            {% for image in exp.images %}
+              {% if slide == 1 %}
+              {% assign slide = slide | plus: 1 %}
+              {% else %}
+              {{ slide }}
+              <img class="{{exp.title | downcase | normalize_whitespace }}-image-{{slide}}" src="{{ image }}" />
+              {% assign slide = slide | plus: 1 %}
+              {% endif %}
             {% endfor %}
             </div>
           {% else %}
@@ -54,22 +69,18 @@ redirect_from: /pages/portfolio/index.html
           {% if exp.links != null %}
             {% assign link_count = exp.links | size %}
             {% if link_count == 1 %}
-              <div class="portfolio-link">
                 {% for link in exp.links %}
                   <a class="button hollow" href="{{link.url}}" target="_blank">{{ link.title }}</a>
                 {% endfor %}
-              </div>
             {% else %}
-              <div class="portfolio-links">
                 <button class="dropdown button hollow" type="button" data-toggle="dropdown-{{ expost }}">Links</button>
-                <div class="dropdown-pane" id="dropdown-{{ expost }}" data-dropdown data-hover="true" data-auto-focus="true" style="z-index: 9">
+                <div class="dropdown-pane" id="dropdown-{{ expost }}" data-dropdown data-hover="true" data-hover-pane="true" data-auto-focus="true" style="z-index: 9">
                   <ul class="menu vertical">
                     {% for link in exp.links %}
                       <li><a class="" href="{{link.url}}" target="_blank">{{ link.title }}</a></li>
                     {% endfor %}
                   </ul>
                 </div>
-              </div>
             {% endif %}            
           {% endif %}
         </div>
