@@ -133,6 +133,9 @@ a.top-bar-normal-logo {
 .experience-image, .experience-content-wrapper {
   position: relative;
 }
+.experience-content-wrapper {
+  z-index:99999;
+}
 .experience-image {
   text-align: center;
 }
@@ -391,4 +394,20 @@ h6 {
 }
 .slick-next {
     right: 5px;
+}
+.dropdown.menu .submenu {
+  display: none;
+}
+.dropdown.menu .is-dropdown-submenu.js-dropdown-active {
+    display: block;
+}
+a, a:hover, a:focus, a:visited {
+  outline: 0;
+}
+.button.dropdown.hollow::after {
+  border-color: #2199e8 transparent transparent;
+}
+.portfolio-links .dropdown-pane {
+  padding: 0;
+  width: auto;
 }

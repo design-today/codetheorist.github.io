@@ -10,6 +10,8 @@
   links:
     - title: 'Brookson SME'
       url: 'https://brooksonsme.co.uk'
+    - title: 'Brookson Outsourcing'
+      url: 'https://brooksonoutsourcing.co.uk'
 
 - title: "Newton-le-Willows Blinds"
   description: "<p>This was a fantastic custom build I completed at <a href='http://ems-internet.co.uk' target='_blank'>EMS Internet</a>. This particular site features some nice use of subtle animations & <a href='http://imakewebthings.com/waypoints/' target='_blank'>Waypoints</a>.</p>"
@@ -18,6 +20,9 @@
     '/portfolio/images/newton-blinds.jpg',
     '/portfolio/images/newton-products.jpg'
   ]
+  links:
+    - title: 'View Website'
+      url: 'http://newton-blinds.co.uk/'
 
 - title: "Csaba Winter"
   description: "<p>This client was extremely satisfied with the finished product, even more so because we acheived this on a templated package due to effective communication between myself and the client.</p>"
@@ -25,6 +30,9 @@
   images: [
     '/portfolio/images/csaba-winter.jpg'
   ]
+  links:
+    - title: 'View Website'
+      url: 'http://csabawinter.co.uk/'
 
 - title: "Newark Lodge"
   description: "<p>This was a Wordpress build completed for the guys at Newark Lodge guesthouse. It features booking functionality, gallery, blog & more.</p>"
@@ -33,6 +41,9 @@
     '/portfolio/images/newark-lodge.jpg',
     '/portfolio/images/newark-gallery.jpg'
   ]
+  links:
+    - title: 'View Website'
+      url: 'http://newarklodge.co.uk/'
 
 - title: "MJ Noble Plumbing"
   description: "<p>Another custom build I completed at <a href='http://ems-internet.co.uk' target='_blank'>EMS Internet</a>.</p>"
@@ -41,6 +52,9 @@
     '/portfolio/images/mj-noble.jpg',
     '/portfolio/images/mj-noble-contact.jpg'
   ]
+  links:
+    - title: 'View Website'
+      url: 'http://mjnobleplumbing.com/'
 
 - title: "SK Joinery"
   description: "<p>Another templated site I completed at <a href='http://ems-internet.co.uk' target='_blank'>EMS Internet</a>.</p>"
@@ -48,4 +62,7 @@
   images: [
     '/portfolio/images/sk-joinery.jpg'
   ]
+  links:
+    - title: 'View Website'
+      url: 'http://www.skjoinery.com/'
 
