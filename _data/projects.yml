@@ -1,0 +1,27 @@
+- title: "Grunt Starter"
+  description: "<p>This is a starter project for people learning to use Grunt, or as a quick-start for already experienced developers.</p>"
+  href: "/"
+  images: [
+    '/portfolio/images/grunt-logo.png'
+  ]
+  links:
+    - title: 'Github'
+      url: 'https://github.com/codetheorist/grunt-starter'
+- title: "Drupal 7 Vagrant Box"
+  description: "<p>This is a Vagrant base box that includes provisioning to install NginX, PHP-FPM, MariaDB, PHPMyAdmin & Webmin.</p>"
+  href: "/"
+  images: [
+    '/portfolio/images/vagrant-logo.png'
+  ]
+  links:
+    - title: 'Atlas Directory'
+      url: 'https://atlas.hashicorp.com/alxs/boxes/D7'
+- title: "Drupal 7 Installation Profile"
+  description: "<p>This is an installation profile for Drupal 7, which includes some must-have modules when building a site with Drupal.</p><p>The installation profile is included with the Drupal Vagrant box above.</p>"
+  href: "/"
+  images: [
+    '/portfolio/images/drupal-logo.png'
+  ]
+  links:
+    - title: 'Bitbucket'
+      url: 'https://bitbucket.org/djalxs/alxs_d7_base'

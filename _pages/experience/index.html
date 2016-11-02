@@ -5,6 +5,10 @@ permalink: /experience/
 redirect_from: /pages/experience/index.html
 ---
 <h1>{{page.title}}</h1>
+{% for repository in site.github.public_repositories %}
+<p>* [{{ repository.name }}]({{ repository.html_url }})</p>
+{% endfor %}
+
 <div class="small-12 columns">
   {% assign odd = true %}
   {% assign expost = 1 %}

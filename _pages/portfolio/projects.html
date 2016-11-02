@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Recent Work
-permalink: /portfolio/
-redirect_from: /pages/portfolio/index.html
+title: Website Portfolio
+permalink: /projects/
+redirect_from: /pages/portfolio/projects.html
 jsarr:
   - '/assets/javascripts/slick.min.js'
   - '/assets/javascripts/slick-init.js'
@@ -17,7 +17,7 @@ jsarr:
 <div class="small-12 columns">
   {% assign odd = true %}
   {% assign expost = 1 %}
-  {% for exp in site.data.websites %}
+  {% for exp in site.data.projects %}
     {% if odd == true %}
       {% assign rowclass = "odd " %}
       {% assign imageclass = "" %}

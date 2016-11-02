@@ -3,22 +3,13 @@ left:
     url: "/"
   - title: "Blog"
     url: "/blog/"
-  - title: "Experience"
-    url: "/experience/"
-    submenu:
-      - title: "Overview"
-        url: "/experience/"
-      - title: "Full Overview"
-        url: "/experience/"
-        submenu:
-          - title: "Languages"
-            url: "/experience/languages"
-          - title: "Software"
-            url: "/experience/software"
-          - title: "Web Frameworks"
-            url: "/experience/frameworks"
   - title: "Portfolio"
     url: "/portfolio/"
+    submenu:
+      - title: "Projects"
+        url: "/projects/"
+      - title: "Websites"
+        url: "/websites/"
   - title: "Contact"
     url: "/contact/"
 
