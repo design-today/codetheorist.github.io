@@ -1,0 +1,25 @@
+---
+layout: default
+title: Categories
+permalink: /categories/
+redirect_from: /pages/categories/index.html
+jsarr:
+  - '/assets/javascripts/categories.js'
+---
+<div class="row">
+  <div class="medium-9 medium-push-3 columns">
+    {% include article-list.html %}
+  </div>
+  <div class="medium-3 medium-pull-9 columns">
+    <ul class="blog-tags-list menu vertical">
+      {% assign sorted_tags = site.categories | sort %}
+      {% for tag in sorted_tags %}
+        {% assign t = tag | first %}
+        {% assign posts = tag | last %}
+        <li class="blog-tag-item" id="{{ t }}-item">
+          <a href onclick="filter('{{ t }}'); return false;">{{ t | capitalize }} ({{ tag[1].size }})</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
