@@ -6,7 +6,7 @@ jsarr:
   - '/assets/javascripts/typed.js'
   - '/assets/javascripts/app-home.js'
 ---
-<h1 id="page-title">{{ page.title }}</h1>
+<h1>{{ page.title }}</h1>
 
             <div class="wrapper">
               <div class="home">
@@ -21,6 +21,7 @@ jsarr:
                   {% endfor %}
 
                 </div>
+
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>

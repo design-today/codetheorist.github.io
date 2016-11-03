@@ -459,3 +459,13 @@ form textarea {
 .experience-image img {
   max-height: 275px;
 }
+
+.hidden {
+  display: none!important;
+  visibility: hidden!important;
+}
+h1#page-title {
+  padding: 1rem 0;
+  background-color: #2199e8;
+  margin-bottom: 1.25rem;
+}

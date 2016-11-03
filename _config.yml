@@ -32,7 +32,7 @@ gems: [
     'jekyll-paginate'
   ]
 repository: codetheorist/codetheorist.github.io
-excerpt_separator: ""
+excerpt_separator: "<!-- more -->"
 exclude:            [
                       '.gitignore',
                       'README.md',
@@ -70,3 +70,4 @@ collections:
     output: true
 
 paginate: 5
+paginate_path: '/blog/page:num'
