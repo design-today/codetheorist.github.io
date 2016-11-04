@@ -1,3 +1,14 @@
+- title: "MJ Noble Plumbing"
+  description: "<p>Another custom build I completed at <a href='http://ems-internet.co.uk' target='_blank'>EMS Internet</a>.</p>"
+  href: "/"
+  images: [
+    '/portfolio/images/mj-noble.jpg',
+    '/portfolio/images/mj-noble-contact.jpg'
+  ]
+  links:
+    - title: 'View Website'
+      url: 'http://mjnobleplumbing.com/'
+
 - title: "Brooksons"
   description: "<p>I took part in this particular project during my time at <a href='http://ems-internet.co.uk' target='_blank'>EMS Internet</a>. The project involved building a master theme to customize for 4 individual smaller sites.</p>"
   href: "/"
@@ -48,17 +59,6 @@
   links:
     - title: 'View Website'
       url: 'http://newarklodge.co.uk/'
-
-- title: "MJ Noble Plumbing"
-  description: "<p>Another custom build I completed at <a href='http://ems-internet.co.uk' target='_blank'>EMS Internet</a>.</p>"
-  href: "/"
-  images: [
-    '/portfolio/images/mj-noble.jpg',
-    '/portfolio/images/mj-noble-contact.jpg'
-  ]
-  links:
-    - title: 'View Website'
-      url: 'http://mjnobleplumbing.com/'
 
 - title: "SK Joinery"
   description: "<p>Another templated site I completed at <a href='http://ems-internet.co.uk' target='_blank'>EMS Internet</a>.</p>"
