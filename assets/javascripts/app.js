@@ -288,3 +288,7 @@ $(document).ready(function() {
     showCursor: false,
   });
 });
+
+$('#top-bar').find('ul.dropdown').find('.has-submenu > a').click(function(e) {
+    e.preventDefault();
+});

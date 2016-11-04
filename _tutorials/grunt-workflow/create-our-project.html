@@ -1,0 +1,38 @@
+---
+published: true
+layout: tutorial
+title: 'Create our project'
+categories: ['grunt']
+tags: ['grunt','tutorial','workflow']
+series: grunt-workflow
+permalink: /tutorials/grunt-workflow/create-our-project
+redirect_from: /tutorials/grunt-workflow/create-our-project.html
+order: 2
+---
+<p>Our first step in creating our Grunt project, is to create a directory for our files to live in, so go ahead and create a folder.</p>
+<p>Once you have created the directory, create a file named 'package.json'. For the bare minimum, our package.json file <strong>MUST</strong> include a 'name' and a 'version', however to stop NPM moaning at us, we will also include the license, repository & description fields.</p>
+<p>You can either use the example below as-is, or modify it with your own package name, etc.</p>
+{% highlight json %}
+{
+  "name": "grunt-workflow",
+  "version": "1.0.0",
+  "description": "A sample Grunt workflow.",
+  "license": "ISC",
+  "repository": " "
+}
+{% endhighlight %}
+<p>Seeing as though you should be using version control, we'll also take this opportunity to create a '.gitignore' file, the content of which is below. This will stop all of your bower & npm packages being submitted to version control, as well as any SASS cache files & log files.</p>
+{% highlight bash %}
+/node_modules
+/bower_components
+/dist
+*.log
+/.sass-cache
+{% endhighlight %}
+<p>Once we've created these files, we-re ready to submit our files to version control. Copy and paste the following commands to create our repo and submit our files.</p>
+{% highlight bash %}
+git init
+git add --all
+git commit -m "Project skeleton"
+{% endhighlight %}
+<p>Now our files are version controlled, we can now proceed to the next stage - installing some Grunt packages and creating our Gruntfile</p>

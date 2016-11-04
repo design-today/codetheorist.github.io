@@ -3,7 +3,7 @@ layout: blog
 title: Blog
 redirect_from: /blog/index.html
 ---
-
+<div id="article-list">
   {% for post in paginator.posts %}
   <article class="blog-article {% for tag in post.categories %}{{tag}}-tag {% endfor %}">
     <a href="{{ post.url }}"><h5>{{ post.title }} <small>{{ post.date | date: "%d %b %Y" }}</small></h5></a>
@@ -21,6 +21,7 @@ redirect_from: /blog/index.html
       <a href="{{ site.baseurl }}{{ post.url }}"><i class="fa fa-plus-circle" aria-hidden="true"></i> Read more</a>
     {% endif %}
   </article>
+  <hr>
   {% endfor %}
 
 
@@ -42,3 +43,4 @@ redirect_from: /blog/index.html
     {% endif %}
   </div>
 {% endif %}
+</div>

@@ -3,6 +3,8 @@ left:
     url: "/"
   - title: "Blog"
     url: "/blog/"
+  - title: "Tutorials"
+    url: "/tutorials/"
   - title: "Portfolio"
     url: "/portfolio/"
     submenu:

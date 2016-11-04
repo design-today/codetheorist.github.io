@@ -12,10 +12,12 @@
 {% endfor %}
 
 
-<div class="callout seriesNote">
+<div data-sticky-container>
+  <div class="sticky" data-sticky data-top-anchor="stick-here:top">
   <ul class="series-menu">
   {% assign count = '0' %}
   {% assign items = site.tutorials | sort: 'order' %}
+  <li><a href="/tutorials/{{ page.series }}/">Overview</a></li>
   {% for post in items %}
   {% if post.series == page.series %}
     {% capture count %}{{ count | plus: '1' }}{% endcapture %}
@@ -29,5 +31,6 @@
   {% endif %}
   {% endfor %}
   </ul>
+  </div>
 </div>
 {% endif %}

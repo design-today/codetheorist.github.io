@@ -43,7 +43,7 @@ function filter(tag) {
   page_title.innerHTML = tag + ' Category';
   $('#page-title').lettering();
   var chars = $('#page-title span').length;
-  console.log(chars);
+  // console.log(chars);
 
   // for(var i=chars; i > 0; i--) {
   //   setTimeout(function() {
@@ -92,15 +92,7 @@ function showContainer(tag) {
   if(list) {
     list.setAttribute('class', 'blog-list-container');
   }
-  // Change URL with browser address bar using the HTML5 History API.
-  if (history.pushState) {
-    // Parameters: data, page title, URL
-    history.pushState(null, null, '#' + tag);
-  }
-  // Fallback for non-supported browsers.
-  else {
-    window.location.hash = '#' + tag;
-  }
+
 }
 
 if(window.location.hash) {
