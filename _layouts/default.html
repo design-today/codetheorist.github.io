@@ -16,7 +16,9 @@
         <!-- original content goes in this container -->
         <div class="off-canvas-content" data-off-canvas-content>
           <main class="page-content" aria-label="Content">
-            <h1 id="page-title">{{ page.title }}</h1>
+            <div id="title-wrapper">
+              <h1 id="page-title">{{ page.title }}</h1>
+            </div>
             <div class="wrapper">
               {{ content }}
             </div>

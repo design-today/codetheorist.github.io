@@ -58,16 +58,16 @@ sass:
   style:            :compressed
 
 collections:
-  posts:
-    output: true
   docs:
     output: true
-  support:
+    title: Docs
+  tutorials:
     output: true
+    permalink: /:collection/:path
+    title: Tutorials
   pages:
     output: true
-  blogs:
-    output: true
+    title: Pages
 
 paginate: 5
 paginate_path: '/blog/page:num'

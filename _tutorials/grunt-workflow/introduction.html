@@ -1,0 +1,31 @@
+---
+published: true
+layout: tutorial
+title: 'Introduction'
+categories: ['grunt']
+date: 2015-09-09 06:00
+series: grunt-workflow
+permalink: /tutorials/grunt-workflow/introduction
+redirect_from: /tutorials/grunt-workflow/introduction.html
+order: 1
+---
+<div class="row quote-row" data-equalizer="quote-row">
+<div class="small-1 columns quote-mark-column open-quote" data-equalizer-watch="quote-row">
+  <div class="quote-marks"><img src='/assets/images/open-quotes.png' /></div>
+</div>
+<div class="small-10 columns panel" data-equalizer-watch="quote-row">
+  <h5 class="subheader">Grunt is a command line JavaScript task runner. Essentially, what Grunt does, is automate tasks such as SCSS/SASS pre-processing, JavaScript linting, file minification, etc.</h5>
+</div>
+<div class="small-1 columns quote-mark-column close-quote" data-equalizer-watch="quote-row">
+  <div class="quote-marks"><img src='/assets/images/close-quotes.png' /></div>
+</div>
+</div>
+  <p>Grunt is a build tool for JavaScript, but can also be extended to perform tasks such as CSS & HTML processing and validation. It could be compared to other build tools such as Ant or Make, but for Web Developers & Designers rather than, for example, C++ developers.</p>
+  <p>Basically, Ben Alman's theory behind creating Grunt, was to create a tool that could perform specific sequences of task using one command, such as <code>grunt build</code> or <code>grunt test</code>.</p>
+<h5>Installing Grunt</h5>
+<p>Grunt is built using Node.JS and is installable using the 'Node Package Manager'. We're not going to go through installing Node.JS in this tutorial, as there are many options for installation and the process is beyond the scope of this guide.</p>
+<p>You will want to install Grunt globally, as well as the CLI tool for Grunt, so just issue the following commands to get Grunt setup on your machine.</p>
+<pre>
+npm install -g grunt<br />npm install -g grunt-cli
+</pre>
+<p>During the install process, NPM will install all of the required dependencies required to run Grunt. Once the install process finishes, you will have Grunt installed and ready to use on your machine. Make sure you don't leave out the <code>-g</code> in the commands or you'll run into issues later on.</p>

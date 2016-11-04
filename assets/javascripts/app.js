@@ -276,3 +276,15 @@ window.addEventListener('resize', function() {
     }
 });
 
+$(document).ready(function() {
+  var page_title = $('#page-title').text();
+  console.log(page_title);
+  $('#page-title').text('').css({'visibility':'visible'});
+    // Init Typed.JS on homepage banner
+  $("#page-title").typed({
+    strings: [page_title],
+    typeSpeed: 50,
+    startDelay: 300,
+    showCursor: false,
+  });
+});

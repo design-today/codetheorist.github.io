@@ -1,0 +1,11 @@
+- title: "Grunt Workflow"
+  description: "In this guide, we'll run through setting up a basic workflow using Grunt."
+  href: "/"
+  image: '/portfolio/images/grunt-logo.png'
+  link: '/tutorials/grunt-workflow'
+
+- title: "Vagrant Base Box"
+  description: "With this we'll learn how to setup a Vagrant base box, based on Ubuntu Trusty64."
+  href: "/"
+  image: '/portfolio/images/vagrant-logo.png'
+  link: 'https://github.com/codetheorist/grunt-starter'
