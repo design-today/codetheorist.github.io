@@ -15,7 +15,7 @@
   ]
   links:
     - title: 'Atlas Directory'
-      url: 'https://atlas.hashicorp.com/alxs/boxes/trusty64'
+      url: 'https://atlas.hashicorp.com/codetheorist/boxes/trusty64'
 - title: "Drupal 7 Installation Profile"
   description: "<p>This is an installation profile for Drupal 7, which includes some must-have modules when building a site with Drupal.</p>"
   href: "/"
