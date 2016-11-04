@@ -287,6 +287,7 @@ $(document).ready(function() {
     startDelay: 300,
     showCursor: false,
   });
+  $('article').slideDown();
 });
 
 $('#top-bar').find('ul.dropdown').find('.has-submenu > a').click(function(e) {
