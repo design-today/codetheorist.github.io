@@ -474,7 +474,7 @@ h1#page-title {
   text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   @include breakpoint(medium up) {
     min-height: 56px;
-    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     font-size: 2.5rem;
   }
 }
@@ -482,9 +482,9 @@ h1#page-title {
   padding: 1rem 0;
   background-color: #2199e8;
   margin-bottom: 1.25rem;
-  background-image:url('/assets/images/header-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-image:url('/assets/images/header-bg.jpg');
 }
 .tutorial-image {
   text-align: center;
