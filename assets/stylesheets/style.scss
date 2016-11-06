@@ -98,9 +98,17 @@ a.top-bar-normal-logo {
 .top-bar, .top-bar ul {
   background-color: #d6d6d6;
 }
+.top-bar, .title-bar {
+ /* background-image: url('/assets/images/title-bg.jpg');*/
+  background-color: #e6e6e6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .top-bar {
   ul {
     width:100%;
+    background-color: transparent;
     li {
       display: inline-block;
       a {
@@ -577,4 +585,17 @@ body {
 }
 #article-list hr:last-of-type {
   display: none;
+}
+.post p {
+  text-align: justify;
+}
+.article-image {
+  .post-image {
+    float: right;
+    margin: 0 1rem;
+    box-sizing: border-box;
+    @include breakpoint(medium up) {
+      max-width: 60%;
+    }
+  }
 }

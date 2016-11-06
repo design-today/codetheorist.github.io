@@ -1,21 +1,39 @@
 ---
 layout: default
 ---
+{% if page.author == null %}
+  {% assign author = site.author.name %}
+{% else %}
+  {% assign author = page.author.name %}
+{% endif %}
+{% if page.google == null %}
+  {% assign google = site.author.google %}
+{% else %}
+  {% assign google = page.author.google %}
+{% endif %}
+
 <div class="row">
   <div class="medium-9 medium-push-3 columns">
     <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-      <header class="post-header">
-        <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-      </header>
 
       <div class="post-content" itemprop="articleBody">
+        {% if page.image != null %}
+          <div class="article-image">
+            <img src="{{ page.image.src }}" alt="{{ page.image.alt }}" class="post-image" />
+          </div>
+        {% endif %}
         {{ content }}
       </div>
 
       {% if site.disqus.shortname %}
         {% include disqus_comments.html %}
       {% endif %}
+
+      <footer class="post-footer">
+        <p class="post-meta">Published on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><a href="https://plus.google.com/{{ google }}" target="_blank" rel="me">{{ author }}</a></span></span></p>
+      </footer>
+
     </article>
   </div>
   <div class="medium-3 medium-pull-9 columns">

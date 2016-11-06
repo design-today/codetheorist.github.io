@@ -1,45 +1,20 @@
 // Init Foundation 6
-
-
 $(document).foundation();
-var label_max_width = 0;
-$('.input-group-label').each(function() {
+
+// Make input group labels equal length
+function equalLengthLabels() {
+  var label_max_width = 0;
+  $('.input-group-label').each(function() {
     var label_width = $(this).width();
     if(label_width >= label_max_width) {
         label_max_width = label_width;
     }
-});
-$('.input-group-label').each(function() {
+  });
+  $('.input-group-label').each(function() {
     $(this).css({'width': label_max_width + 20, 'padding': 0});
-});
-
-// requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
-// MIT license
-
-(function() {
-    var lastTime = 0;
-    var vendors = ['ms', 'moz', 'webkit', 'o'];
-    for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-        window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-        window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame']
-                                   || window[vendors[x]+'CancelRequestAnimationFrame'];
-    }
-
-    if (!window.requestAnimationFrame)
-        window.requestAnimationFrame = function(callback, element) {
-            var currTime = new Date().getTime();
-            var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-            var id = window.setTimeout(function() { callback(currTime + timeToCall); },
-              timeToCall);
-            lastTime = currTime + timeToCall;
-            return id;
-        };
-
-    if (!window.cancelAnimationFrame)
-        window.cancelAnimationFrame = function(id) {
-            clearTimeout(id);
-        };
-}());
+  });
+}
+equalLengthLabels();
 
 // Animation for triangles, canvas elements add to elements which have selectorClass
 // Author - Rich J
@@ -83,7 +58,7 @@ var trianglize = function(element,i){
         triangle.y = Math.random() * this.canvas.offsetHeight; // Random starting position on Y axis
         triangle.scale = Math.random() * 150; //Scale of Triangle based on 150 (Needs changing to work off area of canvas)
         triangle.height = triangle.scale * (Math.sqrt(3)/2); //Height of the triangle (center of edge to opposite verticies)
-        triangle.opacity = Math.random() / 5; //Random initial opacity
+        triangle.opacity = Math.random() / 0.1; //Random initial opacity
         return triangle;
     }
 
@@ -102,7 +77,7 @@ var trianglize = function(element,i){
 
     this.getMaxTriangles = function(){
         //Calculate max number of triangles to be generated
-        return Math.floor(Math.pow(this.canvas.width * this.canvas.height / 2000, 1/2));
+        return Math.floor(Math.pow(this.canvas.width * this.canvas.height / 8000, 0.55));
     }
 
     this.drawTriangle = function(triangle){
@@ -111,16 +86,13 @@ var trianglize = function(element,i){
         //Save current state
         context.save();
         // Draw a triangle
-        context.fillStyle = "rgba(0,0,0," + triangle.opacity + ")";
-        context.beginPath();
-        context.translate(triangle.x,triangle.y);                       //Move to start position
-        context.rotate(Math.PI / 2);                                    //Rotate left
-        context.moveTo(0, -triangle.height / 2);
-        context.lineTo( -triangle.scale / 2, triangle.height / 2);
-        context.lineTo(triangle.scale / 2, triangle.height / 2);
-        context.lineTo(0, -triangle.height / 2);
-        context.fill();
-        context.closePath();
+
+        context.globalAlpha= 0.2;
+        img = document.getElementById("source-b");
+        imgwidth = triangle.scale;
+        imgheight = triangle.scale;
+        context.drawImage(img, triangle.x, triangle.y, triangle.scale, triangle.scale);
+
         //Restore context
         context.restore();
     }
@@ -150,11 +122,11 @@ var trianglize = function(element,i){
     this.moveTriangle = function(triangle){
         this.angle += Math.sqrt(2/triangle.scale);
         //moving top to bottom using Cos
-        triangle.x += (Math.abs(Math.cos(this.angle)*5))/10;
+        triangle.x += (Math.abs(Math.cos(this.angle)*3))/10;
         //Resetting triangles when they are out of frame
         if(triangle.y > this.canvas.height || triangle.y < 0 || triangle.x > (this.canvas.width + (triangle.scale / 2))){
             triangle.y = Math.random() * this.canvas.height;
-            triangle.x =- triangle.scale / 2;
+            triangle.x =- triangle.scale;
         }
     }
 
@@ -275,6 +247,8 @@ window.addEventListener('resize', function() {
         setTimeout(resizeend, delta);
     }
 });
+
+;
 
 $(document).ready(function() {
   var page_title = $('#page-title').text();
