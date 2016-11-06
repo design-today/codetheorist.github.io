@@ -3,26 +3,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  {% if page.author == null %}
-    {% assign author = site.author.name %}
-  {% else %}
-    {% assign author = page.author.name %}
-  {% endif %}
+{% if page.author == null %}{% assign author = site.author.name %}{% else %}{% assign author = page.author.name %}{% endif %}
+{% if page.image.src != null %}{% assign ogimage = page.image.src %}{% else %}{% assign ogimage = '/assets/images/logo.png' %}{% endif %}
+  <meta property="og:image" content="{{ site.url }}{{ ogimage }}" />
   <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
   <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}" />
   <meta property="fb:app_id" content="{{ site.fbapp }}" />
-
-  {% if page.image.src != null %}
-    {% assign ogimage = page.image.src %}
-  {% else %}
-    {% assign ogimage = '/assets/images/logo.png' %}
-  {% endif %}
-  <meta property="og:image" content="{{ site.url }}{{ ogimage }}" />
-  {% if page.google == null %}
-    {% assign google = site.author.google %}
-  {% else %}
-    {% assign google = page.author.google %}
-  {% endif %}
-
+{% if page.google == null %}{% assign google = site.author.google %}{% else %}{% assign google = page.author.google %}{% endif %}
   <link rel=”author” href="https://plus.google.com/{{ google }}"/>
