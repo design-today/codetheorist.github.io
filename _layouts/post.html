@@ -30,6 +30,7 @@ layout: default
 
       <footer class="post-footer">
         <p class="post-meta">Published on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><a href="https://plus.google.com/{{ google }}" target="_blank" rel="me">{{ author }}</a></span></span></p>
+    <div class="fb-send" data-href="{{ post.url }}"></div>
     <div
       class="fb-like fb-post-link"
       data-href="{{ post.url }}"
