@@ -589,13 +589,13 @@ body {
 .post p {
   text-align: justify;
 }
-.article-image {
   .post-image {
     float: right;
-    margin: 0 1rem;
+    padding: 0 1rem;
     box-sizing: border-box;
+    margin: 0 0 1rem 0;
     @include breakpoint(medium up) {
       max-width: 60%;
+      margin: 0;
     }
   }
-}

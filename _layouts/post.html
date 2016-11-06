@@ -19,9 +19,7 @@ layout: default
 
       <div class="post-content" itemprop="articleBody">
         {% if page.image != null %}
-          <div class="article-image">
             <img src="{{ page.image.src }}" alt="{{ page.image.alt }}" class="post-image" />
-          </div>
         {% endif %}
         {{ content }}
       </div>
@@ -32,6 +30,13 @@ layout: default
 
       <footer class="post-footer">
         <p class="post-meta">Published on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><a href="https://plus.google.com/{{ google }}" target="_blank" rel="me">{{ author }}</a></span></span></p>
+    <div
+      class="fb-like fb-post-link"
+      data-href="{{ post.url }}"
+      data-share="true"
+      data-width="220"
+      data-show-faces="false">
+    </div>
       </footer>
 
     </article>
