@@ -11,7 +11,8 @@ jsarr:
     {% include article-list.html %}
   </div>
   <div class="medium-3 medium-pull-9 columns">
-    <ul class="blog-tags-list menu vertical">
+    <ul class="blog-tags-list menu vertical" id="series-menu">
+      <li class="menu-heading"><strong>Categories</strong></li>
       {% assign sorted_tags = site.categories | sort %}
       {% for tag in sorted_tags %}
         {% assign t = tag | first %}

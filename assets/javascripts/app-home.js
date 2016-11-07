@@ -60,11 +60,11 @@ function setBannerSize() {
   if($('#top-bar').is(':visible')) {
     // Set banner reduction amount to top-bar height
     var tbh = $('#top-bar').height();
-    var total_height = (wh - tbh) - 75;
+    var total_height = (wh - tbh) - 25;
   } else {
     // Set banner reduction amount to top-bar height
     var tbh = $('#title-bar').height();
-    var total_height = (wh - tbh) - 50;
+    var total_height = (wh - tbh) - 20;
   }
   // Set banner width & height
   $('#home-banner').css({'width': ww, 'height': total_height});

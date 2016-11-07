@@ -310,7 +310,7 @@ h1 {
 }
 #home-banner {
   display: table;
-  // background-image: url('/assets/images/code.png');
+  // background-image: url('/assets/images/code.jpg');
   // background-size: cover;
   background-color: transparent;
   // background-position: center;
@@ -329,12 +329,13 @@ h1 {
       display: inline-block;
       // min-height: 150px;
       // padding: 10px 0 10px 10px;
-      color: #000;
+      color: #2199e8;
       text-shadow: #f0f0f0 0px 1px 0px;
       font-family: "Consolas", "Courier New", "Courier";
       text-align: left;
       margin-bottom: 0;
       text-align: center;
+      text-transform: uppercase;
       height: 2rem;
       // overflow: hidden;
       h1 {
@@ -344,7 +345,7 @@ h1 {
       display: inline-block;
       // min-height: 70px;
       padding: 10px 0 10px 10px;
-      color: #000;
+      color: #1d1d1d;
       text-shadow: #f0f0f0 0px 1px 0px;
       font-family: "Consolas", "Courier New", "Courier";
       text-align: left;
@@ -366,8 +367,8 @@ h1 {
   left: 0%;
   bottom: 0;
   right: 0;
-  z-index: 0;
-  background: url('/assets/images/code.png');
+  z-index: -1;
+  background: url('/assets/images/code.jpg');
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -376,7 +377,6 @@ h1 {
   // -ms-transform: rotate(-25deg);
   // -o-transform: rotate(-25deg);
   // transform: rotate(-25deg);
-  opacity: 0.2;
 }
 .typed-cursor{
     opacity: 0;
@@ -664,6 +664,16 @@ body.front-page {
     text-shadow: none;
     outline: 0;
   }
+}
+
+.portfolio-single-image {
+  margin-bottom: 30px;
+}
+
+// Blog Articles
+
+.blog-article {
+  margin-bottom: 1rem;
   h5 {
     margin-bottom: 0;
     transition: 0.4s all;
@@ -671,12 +681,8 @@ body.front-page {
       color: #1d1d1d;
     }
   }
-  article {
-    text-align: center;
-    margin-bottom: 1rem;
-    p {
-      text-align: justify;
-    }
+  .post-content {
+    text-align: justify;
   }
   span.post-date {
     width: 100%;
@@ -693,18 +699,18 @@ body.front-page {
     }
   }
 }
-  a {
-    transition: 0.4s all;
-    &:not(.label):hover {
-      color: #1d1d1d !important;
+
+// Link Styling
+
+a {
+  transition: 0.4s all;
+  &.label {
+    cursor: pointer;
+    &:hover {
+      background-color: #2199e8;
     }
   }
-a.label:hover {
-  background-color: #2199e8;
-}
-a.label {
-  cursor: pointer;
-}
-.portfolio-single-image {
-  margin-bottom: 30px;
+  &:not(.label):hover {
+    color: #1d1d1d !important;
+  }
 }

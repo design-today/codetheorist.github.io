@@ -1,10 +1,14 @@
 {% for post in site.posts %}
   <article class="blog-article {% for tag in post.categories %}{{tag}}-tag {% endfor %}">
-    <a href="{{ post.url }}"><h5>{{ post.title }} <small>{{ post.date | date: "%d %b %Y" }}</small></h5></a>
+    <a href="{{ post.url }}"><h5 class="featured-article-title">{{ post.title }}</h5><span class="post-date"><small>{{ post.date | date: "%d %b %Y" }}</small></span></a>
+    <div class="tag-row">
     {% for tag in post.categories %}
-      <a onclick="filter('{{ tag }}'); return false;" class="secondary label">{{tag}}</a>
+      <a href="/categories/#{{ tag }}" class="secondary label">{{tag}}</a>
     {% endfor %}
+    </div>
+    <div class="post-content">
     {{ post.excerpt }}
+    </div>
     {% capture content_words %} 
       {{ post.content | number_of_words }} 
     {% endcapture %} 
