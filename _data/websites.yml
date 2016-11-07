@@ -28,8 +28,18 @@
     - title: 'Brookson SME'
       url: 'https://brooksonsme.co.uk'
 
+- title: "AsiaEurope Media Group"
+  description: "<p>This was a custom project undertaken for AsiaEurope Media Group, which is built on Wordpress. This particular site was straight to coding rather than using PSD files.</p>"
+  href: "/"
+  images: [
+    '/portfolio/images/aemediagroup.jpg'
+  ]
+  links:
+    - title: 'View Website'
+      url: 'http://asiaeuropegroup.com/'
+
 - title: "AsiaEurope FC"
-  description: "<p>This was a custom project undertaken for AsiaEurope Football Consultancy, which is built on Wordpress. This particular site was straight to coding rather than using PSD files.</p>"
+  description: "<p>This was a sub-site built for AsiaEurope Media Group, dedicated to the football aspect of their business. This is also built on Wordpress and again went straight to coding.</p>"
   href: "/"
   images: [
     '/portfolio/images/aefc-home.jpg',
