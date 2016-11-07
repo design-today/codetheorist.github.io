@@ -664,4 +664,41 @@ body.front-page {
     text-shadow: none;
     outline: 0;
   }
+  h5 {
+    margin-bottom: 0;
+    transition: 0.4s all;
+    &:hover {
+      color: #1d1d1d;
+    }
+  }
+  article {
+    text-align: center;
+    margin-bottom: 1rem;
+    p {
+      text-align: justify;
+    }
+  }
+  span.post-date {
+    width: 100%;
+    display: block;
+    color: #cacaca;
+  }
+  .tag-row {
+    margin-bottom: 1rem;
+  }
+  h5, span.post-date, .tag-row {
+    text-align: center;
+    @include breakpoint(medium up){
+      text-align: left;
+    }
+  }
+}
+  a {
+    transition: 0.4s all;
+    &:not(.label):hover {
+      color: #1d1d1d !important;
+    }
+  }
+a.label:hover {
+  background-color: #2199e8;
 }

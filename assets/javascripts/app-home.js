@@ -2,8 +2,28 @@ $(window).resize(function() {
 
   // Set banner size on window resize
   setBannerSize();
+  equalHeight('.featured-article-title');
+  equalHeight('.post-content');
   // $(document).foundation('equalizer','reflow');
 })
+// Make input group labels equal length
+function equalHeight(elem) {
+  var max_height = 0;
+  $(elem).each(function() {
+    $(this).css({'min-height': '0px', 'padding': 0});
+  });
+  $(elem).each(function() {
+    var height = $(this).height();
+    if(height >= max_height) {
+        max_height = height;
+    }
+  });
+  $(elem).each(function() {
+    $(this).css({'min-height': max_height, 'padding': 0});
+  });
+}
+equalHeight('.featured-article-title');
+equalHeight('.post-content');
 
 $(document).ready(function(){
 
