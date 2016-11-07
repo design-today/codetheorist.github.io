@@ -722,3 +722,12 @@ a {
     }
   }
 }
+@include breakpoint(small only) {
+  .input-group-label {
+    width: 100% !important;
+    display: block;
+    border: none;
+    background-color: transparent;
+    margin-bottom: 0.25rem;
+  }
+}
