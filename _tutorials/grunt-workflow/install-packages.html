@@ -1,0 +1,35 @@
+---
+published: true
+layout: tutorial
+title: 'Install some packages'
+categories: ['grunt']
+tags: ['grunt','tutorial','workflow']
+series: grunt-workflow
+permalink: /tutorials/grunt-workflow/install-packages
+redirect_from: /tutorials/grunt-workflow/install-packages.html
+order: 3
+---
+<p>Before continuing, please make sure that you <strong>DO NOT</strong> have your package.json file open, otherwise you might (read probably) undo what we are going to run through in this stage of the tutorial.</p>
+<p>As mentioned earlier, Grunt is built using Node.JS and most commonly installed using NPM, so you may have guessed by now that our Grunt packages are also installed using NPM.</p>
+<p>For the most part, installing packages is fairly simple, using NPM commands to download, install & update packages. The NPM command will also save our package dependencies to our package.json file, so when we load the project up from a different location, we simply run <code>npm install</code> and all of our packages will be downloaded.</p>
+<h5>First Package</h5>
+<p>We're now going to install our first package to our Grunt workflow, which will be one of the most commonly used Grunt packages, JSHint. To install the JSLint Grunt package, simply execute the following command at the root of your project.</p>
+{% highlight bash %}
+npm install grunt-contrib-jshint --save-dev
+{% endhighlight %}
+<p>Once the command has completed, the JSHint package will be installed, along with any dependencies required by it. As the command above has the <code>--save-dev</code> switch passed to it, our package.json file will now have our JSHint package save in it.</p>
+<p>Our package.json file should now look like the following:</p>
+{% highlight bash %}
+{
+  "name": "grunt-workflow",
+  "version": "1.0.0",
+  "description": "A sample Grunt workflow.",
+  "license": "ISC",
+  "repository": "https://github.com/codetheorist/grunt-workflow.git",
+  "devDependencies": {
+    "grunt-contrib-jshint": "^1.0.0"
+  }
+}
+{% endhighlight %}
+<p>If your version number is slightly different, do not worry.</p>
+<p>Next, we're going to setup our Gruntfile.JS, which is the file that tells Grunt what tasks to run and the order to run said tasks.</p>
