@@ -7,7 +7,7 @@
 {% if page.image.src != null %}{% assign ogimage = page.image.src %}{% else %}{% assign ogimage = '/assets/images/codetheorist-home.jpg' %}{% endif %}
   <meta property="og:image" content="{{ site.url }}{{ ogimage }}" />
   <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% endif %} | {{ site.title | escape }}" />
-  <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | normalize_whitespace | truncate: 160 | escape }}{% else %}{{ site.description }}{% endif %}" />
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}" />
   <meta property="fb:app_id" content="{{ site.fbapp }}" />
 {% if page.google == null %}{% assign google = site.author.google %}{% else %}{% assign google = page.author.google %}{% endif %}
