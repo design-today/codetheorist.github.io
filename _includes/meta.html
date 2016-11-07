@@ -10,5 +10,9 @@
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | normalize_whitespace | truncate: 160 | escape }}{% else %}{{ site.description }}{% endif %}" />
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}" />
   <meta property="fb:app_id" content="{{ site.fbapp }}" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="{{ site.author.twitter }}" />
+{% if page.twitter == null %}{% assign twitter = site.author.twitter %}{% else %}{% assign twitter = page.author.twitter %}{% endif %}
+  <meta name="twitter:creator" content="{{ twitter }}" />
 {% if page.google == null %}{% assign google = site.author.google %}{% else %}{% assign google = page.author.google %}{% endif %}
   <link rel=”author” href="https://plus.google.com/{{ google }}"/>
