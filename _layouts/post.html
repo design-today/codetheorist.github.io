@@ -24,9 +24,6 @@ layout: default
         {{ content }}
       </div>
 
-      {% if site.disqus.shortname %}
-        {% include disqus_comments.html %}
-      {% endif %}
 
       <footer class="post-footer">
         <p class="post-meta">Published on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><a href="https://plus.google.com/{{ google }}" target="_blank" rel="me">{{ author }}</a></span></span></p>
@@ -43,8 +40,12 @@ layout: default
 
         </div>
       </footer>
+      {% if site.disqus.shortname %}
+        {% include disqus_comments.html %}
+      {% endif %}
 
     </article>
+<div class="fb-comments" data-href="{{ site.url }}{{ page.url }}" data-numposts="5"></div>
   </div>
   <div class="medium-3 medium-pull-9 columns">
     {% include categories-menu.html %}

@@ -731,3 +731,18 @@ a {
     margin-bottom: 0.25rem;
   }
 }
+.fb_iframe_widget { 
+  width: auto;
+  &.fb-comments {
+    max-width: 100%;
+    width: 100% !important;
+    > span {
+      max-width: 100%;
+      width: 100% !important;
+      iframe {
+        max-width: 100%;
+        width: 100% !important;
+      }
+    }
+  }
+}
