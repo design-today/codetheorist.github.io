@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | normalize_whitespace | truncate: 160 | escape }}{% else %}{{ site.description }}{% endif %}">
 {% if page.author == null %}{% assign author = site.author.name %}{% else %}{% assign author = page.author.name %}{% endif %}
 {% if page.image.src != null %}{% assign ogimage = page.image.src %}{% else %}{% assign ogimage = '/assets/images/codetheorist-home.jpg' %}{% endif %}
   <meta property="og:image" content="{{ site.url }}{{ ogimage }}" />
