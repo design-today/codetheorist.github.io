@@ -4,12 +4,20 @@ layout: post
 categories:
   - 'Vagrant'
   - 'Ubuntu'
-  - 'Trusty64'
 tags: 
   - 'vagrant'
   - 'ubuntu'
+image:
+  src: '/assets/images/vagrant-trusty.jpg'
+  alt: 'Codetheorist Vagrant Trusty Box'
+author:
+  name: 'Alex Scott'
+  google: '116052050658604872041'
 ---
-<p>Welcome and thank you for checking out my website. Please feel free to view & use any of the source code used to build the site, which is available <a href="https://github.com/codetheorist/codetheorist.github.io" target="_blank">here</a>.</p>
+<p>During my recent escapades with Vagrant, I decided to find out just how easy it actually is to create your own Vagrant base box. I have uploaded my finished base box <a href="https://atlas.hashicorp.com/codetheorist/boxes/trusty64" target="_blank">here</a>.</p>
 <!-- more -->
-<p>The site is built using Jekyll and features some unique tricks to acheive some of the additional functionality. I would highly recommend checking out the way some of the features have been implemented, especially if you are new to <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> development.</p>
-
+<p>If you wish to use the Codetheorist base box for your development work, it's simply a case of running the command below.</p>
+{% highlight bash %}
+  vagrant init codetheorist/trusty64 && vagrant up
+{% endhighlight %}
+<p><strong>Please note:</strong> I have not setup any sync'd files for webapps, as do to filesystem limitations between Linux & Windows and the way in which Virtualbox implements sync'd files & folders, it is currently quicker & easier to use an FTP program to edit files on the box</p>

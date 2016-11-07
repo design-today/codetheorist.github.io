@@ -1,5 +1,5 @@
 <ul class="menu vertical" id="series-menu">
-  <li class="menu-heading" ><strong>Categories</strong></li>
+  <li class="menu-heading"><strong>Categories</strong></li>
   {% assign categories_list = site.categories %}
     {% if categories_list.first[0] == null %}
       {% for category in categories_list %}
@@ -7,6 +7,7 @@
         }
       {% endfor %}
     {% else %}
+      <li><a href="/blog/">All ({{ site.posts.size }})</a></li>
       {% for category in categories_list %}
         <li><a href="/categories/#{{ category[0] }}">{{ category[0] | capitalize }} ({{ category[1].size }})</a></li>
       {% endfor %}
