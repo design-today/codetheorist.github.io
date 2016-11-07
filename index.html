@@ -5,4 +5,29 @@ jsarr:
   - '/assets/javascripts/slick.min.js'
   - '/assets/javascripts/typed.js'
   - '/assets/javascripts/app-home.js'
+body_class: 'front-page'
 ---
+{% assign recent_posts = site.posts | limit: 3 %}
+<h1 id="page-title">{{ page.title }}</h1>
+<div class="row">
+  {% for post in recent_posts %}
+    <div class="medium-4 small-12 columns">
+      <article class="blog-article {% for tag in post.categories %}{{tag}}-tag {% endfor %}">
+        <a href="{{ post.url }}"><h5>{{ post.title }} <small>{{ post.date | date: "%d %b %Y" }}</small></h5></a>
+        {% for tag in post.categories %}
+          <a href="/categories/#{{ tag }}" class="secondary label">{{tag}}</a>
+        {% endfor %}
+        {{ post.excerpt }}
+        {% capture content_words %} 
+          {{ post.content | number_of_words }} 
+        {% endcapture %} 
+        {% capture excerpt_words %} 
+          {{ post.excerpt | number_of_words }} 
+        {% endcapture %} 
+        {% if excerpt_words != content_words %}
+          <a href="{{ site.baseurl }}{{ post.url }}"><i class="fa fa-plus-circle" aria-hidden="true"></i> Read more</a>
+        {% endif %}
+      </article>
+      </div>
+  {% endfor %}
+</div>
