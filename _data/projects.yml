@@ -7,8 +7,8 @@
   links:
     - title: 'Github'
       url: 'https://github.com/codetheorist/grunt-starter'
-- title: "Drupal 7 Vagrant Box"
-  description: "<p>This is a Vagrant base box that includes provisioning to install NginX, PHP-FPM, MariaDB, PHPMyAdmin & Webmin.</p>"
+- title: "Ubuntu Vagrant Box"
+  description: "<p>This is a Vagrant base box with minimal Ubuntu Trusty64 installed, along with NginX.</p>"
   href: "/"
   images: [
     '/portfolio/images/vagrant-logo.png'
