@@ -9,6 +9,8 @@ body_class: 'front-page'
 ---
 {% assign recent_posts = site.posts | limit: 3 %}
 <h1 id="page-title">{{ page.title }}</h1>
+{{ site.url | append: '/' }} - {{ page.url | absolute_url }}<br />
+{{ site.title }}
 <div class="row">
   {% for post in recent_posts %}
     <div class="medium-4 small-12 columns">
