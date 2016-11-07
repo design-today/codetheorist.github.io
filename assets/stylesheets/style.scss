@@ -701,9 +701,14 @@ body.front-page {
 }
 
 // Link Styling
-
+.dropdown.menu>li.is-dropdown-submenu-parent:hover>a::after {
+  border-color: #1d1d1d transparent transparent !important;
+}
 a {
   transition: 0.4s all;
+  &::after {
+    transition: 0.4s all;
+  }
   &.label {
     cursor: pointer;
     &:hover {
@@ -712,8 +717,8 @@ a {
   }
   &:not(.label):hover {
     color: #1d1d1d !important;
-    :after {
-      color: #1d1d1d !important;
+    >::after {
+      border-color: #1d1d1d transparent transparent !important;
     }
   }
 }
