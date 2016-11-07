@@ -30,15 +30,18 @@ layout: default
 
       <footer class="post-footer">
         <p class="post-meta">Published on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><a href="https://plus.google.com/{{ google }}" target="_blank" rel="me">{{ author }}</a></span></span></p>
-    <div class="fb-send" data-href="{{ post.url }}"></div>
-    <div
-      class="fb-like fb-post-link"
-      data-href="{{ post.url }}"
-      data-share="true"
-      data-ref="{{ page.title }}"
-      data-width="220"
-      data-show-faces="false">
-    </div>
+        <div class="social-buttons">
+          <div class="fb-send" data-href="{{ site.url }}{{ page.url }}"></div>
+          <div
+            class="fb-like fb-post-link"
+            data-href="{{ site.url }}{{ page.url }}"
+            data-share="true"
+            data-width="150"
+            data-layout="button_count"
+            data-show-faces="false">
+          </div>
+
+        </div>
       </footer>
 
     </article>

@@ -243,11 +243,6 @@ h1 {
     }
   }
 }
-.wrapper {
-  max-width: 64em;
-  margin-right: auto;
-  margin-left: auto;
-}
 .site-footer {
   // border-top: 1px solid #e8e8e8;
   padding: 30px 0;
@@ -264,17 +259,47 @@ h1 {
 .contact-list {
   list-style: none;
   margin-left: 0;
+  text-align: center;
+  @include breakpoint(medium up) {
+    text-align: left;
+  }
 }
 .social-media-list {
   list-style: none;
+  margin: 0;
+  text-align: center;
+  @include breakpoint(medium up) {
+    text-align: right;
+  }
+  li {
+    display: inline-block;
+    @include breakpoint(medium up) {
+      display: block;
+    }
+    &:hover {
+      span {
+        color: #828282;
+      }
+      path {
+        fill: #2199e8;
+      }
+    }
+  }
+  span {
+    transition: 0.4s all;
+  }
   span.icon {
     vertical-align: sub;
+    svg {
+      margin-left: 0.25rem;
+    }
   }
   span:not(.icon) {
     vertical-align: middle;
-  }
-  svg {
-    margin-left: 0.25rem;
+    display: none;
+    @include breakpoint(medium up) {
+      display: inline-block;
+    }
   }
 }
 .page-content::after,
@@ -509,9 +534,6 @@ h1#page-title {
   margin: 0 auto 2rem;
   text-align: center;
 }
-.uppercase {
-  text-transform: uppercase;
-}
 .tut-feature-image {
   max-height: 300px;
   margin: 0 auto;
@@ -532,9 +554,18 @@ h1#page-title {
     }
   }
 }
-.series-menu {
+#series-menu {
   list-style: none;
   margin-left: 0;
+  text-align: center;
+  margin-top: 1rem;
+  @include breakpoint(medium up) {
+    text-align: left;
+    margin-top: 0;
+  }
+  .menu-heading {
+    margin-bottom: 1rem;
+  }
   li {
     width: 100%;
     max-width: 100%;
@@ -567,9 +598,6 @@ h1#page-title {
     text-align: center;
   }
 }
-pre {
-  margin-bottom: 1rem;
-}
 .tutorials-page #title-wrapper {
   margin-bottom: 4rem;
 }
@@ -578,6 +606,20 @@ figure.highlight {
 }
 body {
   background-color: #f8f8f8;
+  pre {
+    margin-bottom: 1rem;
+  }
+  .wrapper {
+    max-width: 64em;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  a {
+    transition: 0.5s all;
+  }
 }
 .blog-article > .label {
   margin-bottom: 1rem;
@@ -586,9 +628,7 @@ body {
 #article-list hr:last-of-type {
   display: none;
 }
-.post p {
-  text-align: justify;
-}
+.post {
   .post-image {
     float: right;
     padding: 0 1rem;
@@ -599,3 +639,21 @@ body {
       margin: 0;
     }
   }
+  p {
+    text-align: justify;
+  }
+}
+
+
+.social-buttons {
+  text-align: center;
+  .fb_iframe_widget {
+      display: inline-block;
+      position: relative;
+      line-height: 1;
+      vertical-align: top;
+  }
+  @include breakpoint(medium up) {
+    text-align: left;
+  }
+}

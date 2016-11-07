@@ -2,7 +2,7 @@ $(window).resize(function() {
 
   // Set banner size on window resize
   setBannerSize();
-  $(document).foundation('equalizer','reflow');
+  // $(document).foundation('equalizer','reflow');
 })
 
 $(document).ready(function(){

@@ -1,20 +1,6 @@
 // Init Foundation 6
 $(document).foundation();
 
-// Make input group labels equal length
-function equalLengthLabels() {
-  var label_max_width = 0;
-  $('.input-group-label').each(function() {
-    var label_width = $(this).width();
-    if(label_width >= label_max_width) {
-        label_max_width = label_width;
-    }
-  });
-  $('.input-group-label').each(function() {
-    $(this).css({'width': label_max_width + 20, 'padding': 0});
-  });
-}
-equalLengthLabels();
 
 // Animation for triangles, canvas elements add to elements which have selectorClass
 // Author - Rich J
@@ -216,7 +202,6 @@ function resizeend() {
     }
 }
 
-
 var triangleCanvas = new Array();
 //begin once DOM is loaded
 window.addEventListener('load', function(){
@@ -234,7 +219,6 @@ window.addEventListener('load', function(){
     startAnimateTriangles();
 });
 
-
 // Triggering resize after window resize event has completed
 var resizeTime = new Date(1, 1, 2000, 12,00,00);
 var resizeTimeout = false;
@@ -247,8 +231,6 @@ window.addEventListener('resize', function() {
         setTimeout(resizeend, delta);
     }
 });
-
-;
 
 $(document).ready(function() {
   var page_title = $('#page-title').text();

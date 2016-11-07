@@ -14,7 +14,7 @@
 
 <div data-sticky-container>
   <div class="sticky" data-sticky data-top-anchor="stick-here:top">
-  <ul class="series-menu">
+  <ul id="series-menu">
   {% assign count = '0' %}
   {% assign items = site.tutorials | sort: 'order' %}
   <li><a href="/tutorials/{{ page.series }}/">Overview</a></li>
