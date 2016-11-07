@@ -708,6 +708,9 @@ a {
     cursor: pointer;
     &:hover {
       background-color: #2199e8;
+      &:after {
+        background-color: #2199e8;
+      }
     }
   }
   &:not(.label):hover {
