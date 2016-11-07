@@ -1,5 +1,4 @@
-{% assign absoluteurl = page.url | absolute_url %}{% assign siteurl = site.url | append: '/' %}
-  <title>{% if absoluteurl == siteurl %}{{ site.title }}{% else %}{{ page.title }}{% endif %}</title>
+  <title>{% if page.title %}{{ page.title | escape }}{% endif %} | {{ site.title | escape }}</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +6,7 @@
 {% if page.author == null %}{% assign author = site.author.name %}{% else %}{% assign author = page.author.name %}{% endif %}
 {% if page.image.src != null %}{% assign ogimage = page.image.src %}{% else %}{% assign ogimage = '/assets/images/codetheorist-home.jpg' %}{% endif %}
   <meta property="og:image" content="{{ site.url }}{{ ogimage }}" />
-  <meta property="og:title" content="{% if absoluteurl == siteurl %}{{ site.title }}{% else %}{{ page.title }}{% endif %}" />
+  <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% endif %} | {{ site.title | escape }}" />
   <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}" />
   <meta property="fb:app_id" content="{{ site.fbapp }}" />
