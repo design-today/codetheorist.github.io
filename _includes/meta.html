@@ -7,7 +7,7 @@
 <meta property="og:site_name" content="{{ site.title | escape }}" />
 <meta property="og:type" content="{% if page.opengraph_type %}{{ page.opengraph_type }}{% elsif site.opengraph_type %}{{ site.opengraph_type }}{% else %}website{% endif %}" />
 
-{% if page.excerpt or site.descriptiion %}
+{% if page.excerpt or site.description %}
 <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | normalize_whitespace | truncate: 160 | escape }}{% else %}{{ site.description }}{% endif %}" />
 {% endif %}
 
@@ -20,7 +20,7 @@
 <meta name="twitter:card" content="summary" />
 
 {% if site.author.twitter %}
-<meta name="twitter:site" content="{{ site.author.twitter }}" />
+<meta name="twitter:site" content="@{{ site.author.twitter }}" />
 {% endif %}
 
 {% if page.author.twitter or site.author.twitter %}
