@@ -1,0 +1,8 @@
+<ul class="recent-posts menu vertical" id="series-menu">
+  <li class="menu-heading"><strong>Recent Articles</strong></li>
+  {% for post in site.posts limit: 5 %}
+    <li>
+      <a href="{{ post.url }}"><h6 class="featured-article-title">{{ post.title }}</h6></a>
+    </li>
+  {% endfor %}
+</ul>

@@ -554,6 +554,9 @@ h1#page-title {
     }
   }
 }
+a:hover {
+  color: #1d1d1d;
+}
 #series-menu {
   list-style: none;
   margin-left: 0;
@@ -565,13 +568,23 @@ h1#page-title {
   }
   .menu-heading {
     margin-bottom: 1rem;
+    text-align: center;
   }
   li {
     width: 100%;
     max-width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
     a {
       display: block;
+      padding: 0;
+      &:hover {
+        color: #1d1d1d;
+      }
     }
+  }
+  p {
+    text-align: justify;
   }
 }
 .quote-row {
@@ -623,7 +636,6 @@ body {
 }
 .blog-article > .label {
   margin-bottom: 1rem;
-  cursor: pointer;
 }
 #article-list hr:last-of-type {
   display: none;
@@ -709,18 +721,6 @@ a {
   &::after {
     transition: 0.4s all;
   }
-  &.label {
-    cursor: pointer;
-    &:hover {
-      background-color: #2199e8;
-    }
-  }
-  &:not(.label):hover {
-    color: #1d1d1d !important;
-    >::after {
-      border-color: #1d1d1d transparent transparent !important;
-    }
-  }
 }
 @include breakpoint(small only) {
   .input-group-label {
@@ -749,4 +749,9 @@ a {
 .gist {
   clear: both;
   padding-top: 1rem;
+}
+@include breakpoint(small only) {
+  .tutorial-desc {
+    text-align: center;
+  }
 }

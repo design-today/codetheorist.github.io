@@ -10,7 +10,7 @@ jsarr:
     <a href="{{ post.url }}"><h5 class="featured-article-title">{{ post.title }}</h5><span class="post-date"><small>{{ post.date | date: "%d %b %Y" }}</small></span></a>
     <div class="tag-row">
     {% for tag in post.categories %}
-      <a href="/categories/#{{ tag }}" class="secondary label">{{tag}}</a>
+      <span class="secondary label">{{tag}}</span>
     {% endfor %}
     </div>
     {% if post.image != null %}

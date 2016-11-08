@@ -5,5 +5,7 @@ $('.blog-article').each(function() {
 });
 $(window).resize(function() {
   equalHeight('.featured-article-title');
+  equalHeight('.post-content');
 });
 equalHeight('.featured-article-title');
+equalHeight('.post-content');
