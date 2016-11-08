@@ -229,9 +229,9 @@ window.addEventListener('resize', function() {
         setTimeout(resizeend, delta);
     }
 });
-$(window).resize(function() {
-    $(document).foundation('equalizer', 'reflow');
-});
+// $(window).resize(function() {
+//     $(document).foundation('equalizer', 'reflow');
+// });
 $(document).ready(function() {
   var page_title = $('#page-title').text();
   console.log(page_title);
