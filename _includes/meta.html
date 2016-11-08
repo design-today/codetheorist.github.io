@@ -5,7 +5,7 @@
 <title>{% if page.title %}{{ page.title | escape }}{% endif %} | {{ site.title | escape }}</title>
 <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% endif %} | {{ site.title | escape }}" />
 <meta property="og:site_name" content="{{ site.title | escape }}" />
-<meta property="og:type" content="{% if page.opengraph_type %}{{ page.opengraph_type }}{% else if site.opengraph_type %}{{ site.opengraph_type }}{% else %}website{% endif %}" />
+<meta property="og:type" content="{% if page.opengraph_type %}{{ page.opengraph_type }}{% elsif site.opengraph_type %}{{ site.opengraph_type }}{% else %}website{% endif %}" />
 
 {% if page.excerpt or site.descriptiion %}
 <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | normalize_whitespace | truncate: 160 | escape }}{% else %}{{ site.description }}{% endif %}" />
