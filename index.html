@@ -7,10 +7,9 @@ jsarr:
   - '/assets/javascripts/app-home.js'
 body_class: 'front-page'
 ---
-{% assign recent_posts = site.posts | limit: 3 %}
 <h1 id="page-title">{{ page.title }}</h1>
 <div class="row">
-  {% for post in recent_posts %}
+  {% for post in site.posts limit: 3 %}
     <div class="medium-4 small-12 columns">
       <article class="blog-article {% for tag in post.categories %}{{tag}}-tag {% endfor %}">
         <a href="{{ post.url }}"><h5 class="featured-article-title">{{ post.title }}</h5><span class="post-date"><small>{{ post.date | date: "%d %b %Y" }}</small></span></a>
