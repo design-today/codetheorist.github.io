@@ -602,12 +602,12 @@ h1#page-title {
   margin-bottom: 4rem;
 }
 figure.highlight {
-  margin: 1rem 0;
+  margin: 0;
 }
 body {
   background-color: #f8f8f8;
   pre {
-    margin-bottom: 1rem;
+    margin-bottom: 0;
   }
   .wrapper {
     max-width: 64em;
@@ -745,4 +745,8 @@ a {
       }
     }
   }
+}
+.gist {
+  clear: both;
+  padding-top: 1rem;
 }

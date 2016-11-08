@@ -21,7 +21,7 @@ author:
   name: Alex Scott
   email: codetheorist@gmail.com
   google: '116052050658604872041'
-  twitter: '@codetheorist'
+  twitter: 'codetheorist'
 image:
   src: '/assets/images/codetheorist-home.jpg'
   height: 726
@@ -84,9 +84,8 @@ collections:
     output: true
     title: Pages
 
-paginate: 5
+paginate: 9
 paginate_path: '/blog/page:num'
 permalink: pretty
 locales:
   - 'en-GB'
-  - 'fr-FR'

@@ -2,16 +2,20 @@
 layout: blog
 title: Blog
 redirect_from: /blog/index.html
+jsarr:
+  - '/assets/javascripts/blog.js'
 ---
-<div id="article-list">
   {% for post in paginator.posts %}
-  <article class="blog-article {% for tag in post.categories %}{{tag}}-tag {% endfor %}">
+  <article class="blog-article {% for tag in post.categories %}{{tag}}-tag {% endfor %} column">
     <a href="{{ post.url }}"><h5 class="featured-article-title">{{ post.title }}</h5><span class="post-date"><small>{{ post.date | date: "%d %b %Y" }}</small></span></a>
     <div class="tag-row">
     {% for tag in post.categories %}
       <a href="/categories/#{{ tag }}" class="secondary label">{{tag}}</a>
     {% endfor %}
     </div>
+    {% if post.image != null %}
+        <img src="{{ post.image.src }}" {% if post.image.alt %} alt="{{ post.image.alt }}" {% endif %} class="post-image" />
+    {% endif %}
     <div class="post-content">
     {{ post.excerpt }}
     </div>
@@ -25,7 +29,6 @@ redirect_from: /blog/index.html
       <a href="{{ site.baseurl }}{{ post.url }}"><i class="fa fa-plus-circle" aria-hidden="true"></i> Read more</a>
     {% endif %}
   </article>
-  <hr>
   {% endfor %}
 
 
@@ -47,4 +50,3 @@ redirect_from: /blog/index.html
     {% endif %}
   </div>
 {% endif %}
-</div>

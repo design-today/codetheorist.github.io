@@ -2,17 +2,18 @@
     <script src="/assets/javascripts/requestAnimationFrame.js"></script>
     <script src="/assets/javascripts/vendor/what-input.js"></script>
     <script src="/assets/javascripts/vendor/foundation.min.js"></script>
+    <script src="/assets/javascripts/app.js"></script>
+    <script src="/assets/javascripts/typed.js"></script>
     {% if page.jsarr %}
       {% for js in page.jsarr %}
         <script src="{{ js }}"></script>
       {% endfor %}
     {% endif %}
-    <script src="/assets/javascripts/app.js"></script>
-    <script src="/assets/javascripts/typed.js"></script>
+{% if site.facebook.app_id %}
 <script>
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '{{ site.fbapp }}',
+      appId      : '{{ site.facebook.app_id }}',
       xfbml      : true,
       version    : 'v2.7'
     });
@@ -27,3 +28,4 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
+{% endif %}

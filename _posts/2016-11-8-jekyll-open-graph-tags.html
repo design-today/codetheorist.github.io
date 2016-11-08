@@ -1,0 +1,177 @@
+---
+title: 'Jekyll Open Graph Implementation'
+layout: post
+categories:
+  - 'SEO'
+  - 'Social'
+tags: 
+  - 'open graph'
+  - 'metadata'
+  - 'facebook'
+  - 'seo'
+image:
+  src: '/assets/images/og-logo.png'
+  alt: 'Open Graph Logo'
+author:
+  name: 'Alex Scott'
+  google: '116052050658604872041'
+determiner: 'A'
+---
+<p>If you're building a site using Jekyll, then the following code snippet may be just what you need for implementing Open Graph tags on your site. The code snippet below can be put in it's own partial, for easy inclusion in every Jekyll project that you undertake. Below the snippet, I have outlined the variables used, with code snippets related to the _config.yml file as well as the YAML front matter for individual pages & posts.</p>
+<!-- more -->
+<h5>Open Graph Tag Code</h5>
+{% gist codetheorist/55b2f5f9a60df8f4d38919dc6f7315a1 %}
+<h5>Tags & Variables</h5>
+<p>Please use the following table as a reference when adding your site and/or page variables in Jekyll.</p>
+<table class="stack">
+  <thead>
+    <tr>
+      <th width="34%">Tag</th>
+      <th width="33%">Page Variable</th>
+      <th width="33%">Fallback Site Variable</th>
+      <th width="33%">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&lt;title&gt;</td>
+      <td>page.title</td>
+      <td>site.title</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>description</td>
+      <td>page.excerpt</td>
+      <td>site.description</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>og:site_name</td>
+      <td>N/A</td>
+      <td>site.title</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>og:determiner</td>
+      <td>page.determiner</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>og:title</td>
+      <td>page.title</td>
+      <td>site.title</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>og:description</td>
+      <td>page.excerpt</td>
+      <td>site.description</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>og:type</td>
+      <td>page.opengraph_type</td>
+      <td>site.opengraph_type</td>
+      <td>website</td>
+    </tr>
+    <tr>
+      <td>og:url</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>Page Url</td>
+    </tr>
+    <tr>
+      <td>og:locale(:alternate)</td>
+      <td>N/A</td>
+      <td>site.locales (Array)</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>fb:app_id</td>
+      <td>N/A</td>
+      <td>site.facebook.app_id</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>twitter:card</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>summary</td>
+    </tr>
+    <tr>
+      <td>twitter:site</td>
+      <td>N/A</td>
+      <td>site.author.twitter</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>twitter:creator</td>
+      <td>page.author.twitter</td>
+      <td>site.author.twitter</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>rel="author"</td>
+      <td>page.author.google</td>
+      <td>site.author.google</td>
+      <td>N/A</td>
+    </tr>
+  </tbody>
+</table>
+<p>The Open Graph image tag implentation is not really describable in a table, however the implementation is fairly simple to work out.</p>
+<p>The code also includes an optional Facebook Pixel script, which will also be included should the site.facebook.pixel_id be provided.</p>
+<h5>Config.yml</h5>
+<p>An example config.yml file with just the necessary parameters is shown below.</p>
+<pre>
+{% highlight yaml %}
+
+title: Code Theorist
+
+email: codetheorist@gmail.com
+
+description: > 
+  The brand new website from Code Theorist, built using Jekyll.
+
+author:
+  name: Code Theorist
+  email: codetheorist@gmail.com
+  google: '116052050658604872041'
+  twitter: 'codetheorist'
+
+image:
+  src: '/image.jpg'
+  height: 726
+  width: 1366
+  type: image/jpeg
+
+facebook:
+  app_id: '1234567890123456'
+  pixel_id: '1234567890123456'
+
+locales:
+  - 'en-GB'
+  - 'en-US'
+
+{% endhighlight %}
+</pre>
+<h5>Front Matter</h5>
+<p>The following is some sample front matter containing all of the necessary required page variables.</p>
+<pre>
+{% highlight yaml %}
+---
+title: Code Theorist
+excerpt: 'If this is ommitted, the page excerpt can be automatically generated from the page content'
+determiner: 'the'
+opengraph_type: 'article'
+author:
+  google: '116052050658604872041'
+  twitter: 'codetheorist'
+image:
+  src: '/image.jpg'
+  height: 726
+  width: 1366
+  type: image/jpeg
+---
+{% endhighlight %}
+</pre>

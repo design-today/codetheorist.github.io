@@ -14,7 +14,7 @@
 <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}" />
 
 {% if site.facebook_app_id %}
-<meta property="fb:app_id" content="{{ site.facebook_app_id }}" />
+<meta property="fb:app_id" content="{{ site.facebook.app_id }}" />
 {% endif %}
 
 <meta name="twitter:card" content="summary" />
@@ -24,7 +24,7 @@
 {% endif %}
 
 {% if page.author.twitter or site.author.twitter %}
-<meta name="twitter:creator" content="{% if page.twitter %}{{ page.author.twitter }}{% else %}{{site.author.twitter }}{% endif %}" />
+<meta name="twitter:creator" content="@{% if page.twitter %}{{ page.author.twitter }}{% else %}{{site.author.twitter }}{% endif %}" />
 {% endif %}
 
 {% if page.author.google or site.author.google %}

@@ -248,3 +248,20 @@ $(document).ready(function() {
 $('#top-bar').find('ul.dropdown').find('.has-submenu > a').click(function(e) {
     e.preventDefault();
 });
+
+// Make input group labels equal length
+function equalHeight(elem) {
+  var max_height = 0;
+  $(elem).each(function() {
+    $(this).css({'min-height': '0px', 'padding': 0});
+  });
+  $(elem).each(function() {
+    var height = $(this).height();
+    if(height >= max_height) {
+        max_height = height;
+    }
+  });
+  $(elem).each(function() {
+    $(this).css({'min-height': max_height, 'padding': 0});
+  });
+}

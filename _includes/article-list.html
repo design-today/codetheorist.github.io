@@ -1,5 +1,5 @@
 {% for post in site.posts %}
-  <article class="blog-article {% for tag in post.categories %}{{tag}}-tag {% endfor %}">
+  <article class="blog-article {% for tag in post.categories %}{{tag}}-tag {% endfor %} column">
     <a href="{{ post.url }}"><h5 class="featured-article-title">{{ post.title }}</h5><span class="post-date"><small>{{ post.date | date: "%d %b %Y" }}</small></span></a>
     <div class="tag-row">
     {% for tag in post.categories %}
