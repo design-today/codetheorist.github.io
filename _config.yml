@@ -22,7 +22,16 @@ author:
   email: codetheorist@gmail.com
   google: '116052050658604872041'
   twitter: '@codetheorist'
-fbapp: '1621236338180252'
+image:
+  src: '/assets/images/codetheorist-home.jpg'
+  height: 726
+  width: 1366
+  type: image/jpeg
+
+facebook:
+  app_id: '1621236338180252'
+  pixel_id: '1327292823956877'
+
 baseurl: "" # the subpath of your site, e.g. /blog
 # url: "http://localhost:4000/" # the base hostname & protocol for your site, e.g. http://example.com
 url: "https://codetheorist.github.io" # the base hostname & protocol for your site, e.g. http://example.com
@@ -78,3 +87,6 @@ collections:
 paginate: 5
 paginate_path: '/blog/page:num'
 permalink: pretty
+locales:
+  - 'en-GB'
+  - 'fr-FR'
