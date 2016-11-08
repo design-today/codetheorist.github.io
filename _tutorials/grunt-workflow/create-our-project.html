@@ -12,6 +12,7 @@ order: 2
 <p>Our first step in creating our Grunt project, is to create a directory for our files to live in, so go ahead and create a folder.</p>
 <p>Once you have created the directory, create a file named 'package.json'. For the bare minimum, our package.json file <strong>MUST</strong> include a 'name' and a 'version', however to stop NPM moaning at us, we will also include the license, repository & description fields.</p>
 <p>You can either use the example below as-is, or modify it with your own package name, etc.</p>
+<pre>
 {% highlight json %}
 {
   "name": "grunt-workflow",
@@ -21,6 +22,7 @@ order: 2
   "repository": "https://github.com/codetheorist/grunt-workflow.git"
 }
 {% endhighlight %}
+</pre>
 <h5>Version Control</h5>
 <p>Seeing as though you should be using version control, we'll also take this opportunity to create a '.gitignore' file, the content of which is below. This will stop all of your bower & npm packages being submitted to version control, as well as any SASS cache files & log files.</p>
 {% highlight bash %}

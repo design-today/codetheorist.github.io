@@ -19,6 +19,7 @@ npm install grunt-contrib-jshint --save-dev
 {% endhighlight %}
 <p>Once the command has completed, the JSHint package will be installed, along with any dependencies required by it. As the command above has the <code>--save-dev</code> switch passed to it, our package.json file will now have our JSHint package save in it.</p>
 <p>Our package.json file should now look like the following:</p>
+<pre>
 {% highlight bash %}
 {
   "name": "grunt-workflow",
@@ -31,5 +32,6 @@ npm install grunt-contrib-jshint --save-dev
   }
 }
 {% endhighlight %}
+</pre>
 <p>If your version number is slightly different, do not worry.</p>
 <p>Next, we're going to setup our Gruntfile.JS, which is the file that tells Grunt what tasks to run and the order to run said tasks.</p>
