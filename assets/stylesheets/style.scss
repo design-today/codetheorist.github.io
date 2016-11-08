@@ -630,6 +630,9 @@ body {
   .uppercase {
     text-transform: uppercase;
   }
+  a {
+    transition: 0.5s all;
+  }
 }
 .blog-article > .label {
   margin-bottom: 1rem;
@@ -712,6 +715,12 @@ body.front-page {
 // Link Styling
 .dropdown.menu>li.is-dropdown-submenu-parent:hover>a::after {
   border-color: #1d1d1d transparent transparent !important;
+}
+a {
+  transition: 0.4s all;
+  &::after {
+    transition: 0.4s all;
+  }
 }
 @include breakpoint(small only) {
   .input-group-label {
