@@ -25,6 +25,7 @@ order: 2
 </pre>
 <h5>Version Control</h5>
 <p>Seeing as though you should be using version control, we'll also take this opportunity to create a '.gitignore' file, the content of which is below. This will stop all of your bower & npm packages being submitted to version control, as well as any SASS cache files & log files.</p>
+<pre>
 {% highlight bash %}
 /node_modules
 /bower_components
@@ -32,10 +33,13 @@ order: 2
 *.log
 /.sass-cache
 {% endhighlight %}
+</pre>
 <p>Once we've created these files, we-re ready to submit our files to version control. Copy and paste the following commands to create our repo and submit our files.</p>
+<pre>
 {% highlight bash %}
 git init
 git add --all
 git commit -m "Project skeleton"
 {% endhighlight %}
+</pre>
 <p>Now our files are version controlled, we can now proceed to the next stage - installing a Grunt package.</p>
